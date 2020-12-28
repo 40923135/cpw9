@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='功課繳交.html'>功課繳交</a><ul class='dropdown'><li><a href='H1.html'>H1</a><li class='has-children'><a href='H3.html'>H3</a><ul class='dropdown'><li><a href='p1.html'>p1</a></li></li></ul></ul><li><a href='組員名單-1.html'>組員名單-1</a><li><a href='組員名單-2.html'>組員名單-2</a></li>
+                     <li class='has-children'><a href='功課繳交.html'>功課繳交</a><ul class='dropdown'><li><a href='H1.html'>H1</a><li class='has-children'><a href='H3 (AISE)LL EXERC.html'>H3 (AISE)LL EXERC</a><ul class='dropdown'><li><a href='p1.html'>p1</a><li><a href='p2.html'>p2</a><li><a href='P3.html'>P3</a></li></ul><li class='has-children'><a href='.html'></a><ul class='dropdown'><li><a href='P4.html'>P4</a><li><a href='P5.html'>P5</a><li><a href='P6.html'>P6</a></li></ul><li><a href='H3(All Solutions).html'>H3(All Solutions)</a></li></ul><li><a href='組員名單.html'>組員名單</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,10 +133,73 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">p1 << <a href='p1.html'>Previous</a> <a href='組員名單-2.html'>Next</a> >> 組員名單-2<br /><h1>組員名單-1</h1>
-<p>=======</p>
-<p>40923105 12/25</p>
-<br />p1 << <a href='p1.html'>Previous</a> <a href='組員名單-2.html'>Next</a> >> 組員名單-2</div>
+    <div id="tipue_search_content">P4 << <a href='P4.html'>Previous</a> <a href='P6.html'>Next</a> >> P6<br /><h1>P5</h1>
+<p>LIST OVER LAPS</p>
+<div><br/><i></i></div>
+<div>EXERCISE FIVE</div>
+<p>Take two lists, say for example these two:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
+</figure>
+<p>and write a program that returns a list that contains only the elements that are common between the lists (without duplicates). Make sure your program works on two lists of different sizes.</p>
+<p>Extras:</p>
+<ol>
+<li>Randomly generate two lists to test this</li>
+<li>Write this in one line of Python (don’t worry if you can’t figure this out at this point - we’ll get to it soon)</li>
+</ol>
+<p>LIST PROPERTISE</p>
+<p>In other words, “things you can do with lists.”</p>
+<p>One of the interesting things you can do with lists in Python is figure out whether something is inside the list or not. For example:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20]
+  &gt;&gt;&gt; 10 in a
+  True
+  &gt;&gt;&gt; 3 in a
+  False</code></pre>
+</figure>
+<p>You can of course use this in loops, conditionals, and any other programming constructs.</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">list_of_students</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Michele"</span><span class="p">,</span> <span class="s">"Sara"</span><span class="p">,</span> <span class="s">"Cassie"</span><span class="p">]</span>
+
+  <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Type name to check: "</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">list_of_students</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"This student is enrolled."</span><span class="p">)<br/><br/><strong>清單重疊</strong></span></code></pre>
+<div><br/><i></i></div>
+<div>練習五合解決方法</div>
+<p><span><span>拿兩個列表，舉例來說，這兩個：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>並編寫一個程序，該程序返回一個列表，該列表僅包含列表之間的公共元素（無重複項）。</span><span>確保您的程序可以在兩個不同大小的列表上運行。</span></span></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>隨機生成兩個列表進行測試</span></span></li>
+<li><span><span>用Python的一行代碼編寫（不要擔心，如果您現在不能解決這個問題，我們會盡快處理）</span></span></li>
+</ol>
+<p><span><span>列出屬性</span></span></p>
+<p><span><span>換句話說，“您可以使用列表執行的操作”。</span></span></p>
+<p><span><span>您可以使用Python中的列表進行有趣的操作之一，就是確定列表中是否包含某些內容。</span><span>例如：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20]<span></span>
+  &gt;&gt;&gt; 10 in a<span></span>
+  True<span></span>
+  &gt;&gt;&gt; 3 in a<span></span>
+  False</code></pre>
+</figure>
+<p><span><span>您當然可以在循環，條件和任何其他編程構造中使用它。</span></span></p>
+<pre><code class="language-python" data-lang="python">  <span class="n">list_of_students</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Michele"</span><span class="p">,</span> <span class="s">"Sara"</span><span class="p">,</span> <span class="s">"Cassie"</span><span class="p">]</span><span></span>
+<span></span>
+  <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Type name to check: "</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">list_of_students</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"This student is enrolled."</span><span class="p">)<br/><br/></span></code></pre>
+<figure class="highlight">
+<h4></h4>
+<h4></h4>
+</figure>
+</figure>
+<br />P4 << <a href='P4.html'>Previous</a> <a href='P6.html'>Next</a> >> P6</div>
         
     <!-- footer -->
       <div class="container">
