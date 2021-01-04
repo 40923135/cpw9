@@ -1,0 +1,336 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cp2020 ag5</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cp2020 ag5</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cp2020 ag5</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='功課繳交.html'>功課繳交</a><ul class='dropdown'><li><a href='H1.html'>H1</a><li><a href='H3.html'>H3</a><li class='has-children'><a href='H3 (ALL EXERCISES).html'>H3 (ALL EXERCISES)</a><ul class='dropdown'><li><a href='p1.html'>p1</a><li><a href='p2.html'>p2</a><li><a href='P3-1.html'>P3-1</a></li></ul><li class='has-children'><a href='.html'></a><ul class='dropdown'><li><a href='P4-1.html'>P4-1</a><li><a href='P5-1.html'>P5-1</a><li><a href='P6-1.html'>P6-1</a></li></ul><li class='has-children'><a href='H3(All Solutions).html'>H3(All Solutions)</a><ul class='dropdown'><li><a href='P1.html'>P1</a><li><a href='P2.html'>P2</a><li><a href='P3-2.html'>P3-2</a><li><a href='P4-2.html'>P4-2</a><li><a href='P5-2.html'>P5-2</a><li><a href='P6-2.html'>P6-2</a></li></li></ul></ul><li><a href='組員名單.html'>組員名單</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">P3-2 << <a href='P3-2.html'>Previous</a> <a href='P5-2.html'>Next</a> >> P5-2<br /><h1>P4-2</h1>
+<p><strong>EXERCISE 4</strong></p>
+<p><strong>SAMPALE SOLUTION</strong></p>
+<p>Create a program that asks the user for a number and then prints out a list of all the divisors of that number. (If you don’t know what a<span> </span><em>divisor</em><span> </span>is, it is a number that divides evenly into another number. For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)</p>
+<p></p>
+<div class="gist" id="gist9269773">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-practice-python-excersise-4-divisors">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-practice-python-excersise-4-divisors-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC1">__author__ = 'jeffreyhunt'</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-practice-python-excersise-4-divisors-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC2"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-practice-python-excersise-4-divisors-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC3">num = int(input("Please choose a number to divide: "))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-practice-python-excersise-4-divisors-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC4"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-practice-python-excersise-4-divisors-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC5">listRange = list(range(1,num+1))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-practice-python-excersise-4-divisors-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-practice-python-excersise-4-divisors-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC7">divisorList = []</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-practice-python-excersise-4-divisors-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC8"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-practice-python-excersise-4-divisors-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC9">for number in listRange:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-practice-python-excersise-4-divisors-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC10">if num % number == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-practice-python-excersise-4-divisors-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC11">divisorList.append(number)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-practice-python-excersise-4-divisors-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC12"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-practice-python-excersise-4-divisors-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC13">print(divisorList)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/jeffhunt/9269773/raw/29cd4515ddb89cd5b1440597625cf41e3d3ee957/Practice%20Python%20-%20Excersise%204:%20Divisors">view raw</a><a href="https://gist.github.com/jeffhunt/9269773#file-practice-python-excersise-4-divisors">Practice Python - Excersise 4: Divisors</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a></div>
+</div>
+</div>
+<p>There were a number of tricky things with this exercise. First, the type conversions between input strings and integers for the<span> </span><code class="highlighter-rouge">range()</code><span> </span>function need to be carefully output. Second, the arguments to<span> </span><code class="highlighter-rouge">range()</code><span> </span>had to be carefully constructed to cover all the possible numbers. Third, the condition in the<span> </span><code class="highlighter-rouge">if</code><span> </span>statement had to be correct as well.</p>
+<p><strong>除數解決方案</strong></p>
+<p><strong>練習4</strong></p>
+<span></span>
+<p><span><span>數解決方案</span></span><span><span>創建一個程序，詢問用戶一個數字，然後打印出該數字的所有除數的列表。</span><span>（如果您不知道</span></span><em><span><span>除數</span></span></em><span><span>是多少，它是一個平均除以另一個數的數字。例如，13是26的除數，因為26/13沒有餘數。）</span></span></p>
+<p><strong>樣品</strong></p>
+<div class="gist" id="gist9269773">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-practice-python-excersise-4-divisors">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-practice-python-excersise-4-divisors-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC1"><span><span>__author__ ='jeffreyhunt'</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-practice-python-excersise-4-divisors-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC2"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-practice-python-excersise-4-divisors-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC3"><span><span>num = int（input（“請選擇一個要除的數字：”））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-practice-python-excersise-4-divisors-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC4"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-practice-python-excersise-4-divisors-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC5"><span><span>listRange = list（範圍（1，num + 1））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-practice-python-excersise-4-divisors-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-practice-python-excersise-4-divisors-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC7"><span><span>divisorList = []</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-practice-python-excersise-4-divisors-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC8"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-practice-python-excersise-4-divisors-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC9"><span><span>用於listRange中的數字：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-practice-python-excersise-4-divisors-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC10"><span><span> 如果num％number == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-practice-python-excersise-4-divisors-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC11"><span><span> divisorList.append（number）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-practice-python-excersise-4-divisors-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC12"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-practice-python-excersise-4-divisors-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC13"><span><span>打印（divisorList）</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/jeffhunt/9269773/raw/29cd4515ddb89cd5b1440597625cf41e3d3ee957/Practice%20Python%20-%20Excersise%204:%20Divisors"><span><span>查看原始</span></span></a><a href="https://gist.github.com/jeffhunt/9269773#file-practice-python-excersise-4-divisors"><span><span>實踐Python的- Excersise 4：除數</span></span></a><span><span><span> </span>託管與❤通過</span></span><a href="https://github.com/"><span><span>GitHub上</span></span></a></div>
+</div>
+</div>
+<p><span><span>這項練習有很多棘手的事情。</span><span>首先，</span></span><code class="highlighter-rouge">range()</code><span><span>需要仔細輸出函數的</span><span>輸入字符串和整數之間的類型轉換</span><span>。</span><span>其次，</span></span><code class="highlighter-rouge">range()</code><span><span>必須仔細構造</span><span>論據以</span><span>涵蓋所有可能的數字。</span><span>第三，</span></span><code class="highlighter-rouge">if</code><span><span>聲明中</span><span>的條件</span><span>也必須正確。</span></span></p>
+<br />P3-2 << <a href='P3-2.html'>Previous</a> <a href='P5-2.html'>Next</a> >> P5-2</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

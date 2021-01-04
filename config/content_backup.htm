@@ -2,8 +2,9 @@
 <h2>H1</h2>
 <p>40923135 12/11</p>
 <p>40923110 12/18</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <h2>H3</h2>
+<p>40923135 01/04</p>
+<h2>H3 (ALL EXERCISES)</h2>
 <h3>p1</h3>
 <p>chapter input</p>
 <div><i>input strings types int</i></div>
@@ -62,10 +63,1310 @@
 <p>but division and subtraction do not work like this. In terms of multiplication, the idea of multiplyling two strings together is not well-defined. What does it mean to multiply two strings in the first place? However, it makes sense in a way to specify multiplying a string by a number - just repeat that string that number of times. Try this in your own program with all the arithmetic operations with numbers and strings - the best way to get a feel for what works and what doesn’t is to try it!</p>
 <p>Happy coding</p>
 <p>Forgot how to<span> </span><a href="https://www.practicepython.org/about/">submit exercises</a>?</p>
+<p><strong>字符輸入</strong></p>
+<div><i><span><span>輸入字符串類型int</span></span></i></div>
+<p><span><span>向觀眾校準練習將是一項艱鉅的任務，因此，我請您忍受練習是否太容易或太難。</span><span>每週都會有一個民意測驗，您可以單擊以討論該練習是太容易還是太難了，希望在幾週後，我會把水平調到正確的水平。</span><span>讓我們開始吧！</span><span>如果您需要額外的挑戰，我將從練習開始，並在以後進行討論。</span></span></p>
+<p><span><span>練習1和解決方案</span></span></p>
+<p><span><span>創建一個程序，要求用戶輸入他們的姓名和年齡。</span><span>打印給他們的消息，告訴他們他們將滿100歲的年份。</span></span></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>通過詢問用戶另一個號碼並打印出先前消息的許多副本來添加到先前的程序中。</span><span>（</span></span><em><span><span>提示：</span></span><a href="http://www.mathsisfun.com/operation-order-pemdas.html"><span><span>操作順序</span></span></a><span><span>在Python中存在</span></span></em><span><span>）</span></span></li>
+<li><span><span>在單獨的行上打印出先前消息的許多副本。</span><span>（</span></span><em><span><span>提示：字符串</span></span><code class="highlighter-rouge">"\n</code><span><span>與按ENTER按鈕相同</span></span></em><span><span>）</span></span><span><span></span></span></li>
+</ol>
+<p><span><span>討論區</span></span></p>
+<p><span><span>本週的概念：</span></span></p>
+<ul>
+<li><span><span>獲取用戶輸入</span></span></li>
+<li><span><span>處理字符串（幾種方法）</span></span></li>
+</ul>
+<p><strong>使用python輸入</strong></p>
+<p><span><span>要在Python（3）中獲得用戶輸入，您使用的命令是</span></span><a href="http://docs.python.org/3.3/library/functions.html?highlight=input#input"><code class="highlighter-rouge">input()</code></a><span><span>。</span><span>將結果存儲在變量中，並將其用於您的內心。</span><span>請記住，即使用戶輸入數字，您從用戶那裡得到的結果也將是字符串。</span></span></p>
+<p><span><span>例如，</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give me your name: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Your name is "</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>這將在終端（或外殼，無論您在其中運行Python的是什麼）中顯示的內容是：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">Give</span> <span class="n">me</span> <span class="n">your</span> <span class="n">name</span><span class="p">:</span> <span class="n">Michele</span>
+<span class="n">Your</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">Michele</span></code></pre>
+</figure>
+<p><span><span>最後發生的事情</span></span><code class="highlighter-rouge">input()</code><span><span>是，它等待用戶鍵入內容並按Enter。</span><span>僅在用戶按下ENTER之後，程序才會繼續。</span></span></p>
+<p><strong>處理字符串</strong></p>
+<p><span><span>從</span></span><code class="highlighter-rouge">input()</code><span><span>函數中</span><span>得到的</span><span>是一個字符串。</span><span>你能做什麼呢？</span></span></p>
+<p><span><span>第一：將字符串變成數字。</span><span>假設您100％肯定用戶輸入了數字。</span><span>您可以使用函數將字符串轉換為整數</span></span><a href="http://docs.python.org/3.3/library/functions.html#int"><code class="highlighter-rouge">int()</code></a><span><span>。</span><span>（在以後的一兩三個練習中，當用戶不輸入數字而您嘗試這樣做時，將會出現有關如何處理的問題；現在不必擔心該問題）。</span><span>看起來像這樣：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your age: "</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>（或者，如果您想使代碼更緊湊）</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter your age: "</span><span class="p">))</span>
+	</code></pre>
+</figure>
+<p><span><span>在這兩種情況下，</span></span><code class="highlighter-rouge">age</code><span><span>都將包含一個整數變量，現在您可以使用它進行數學運算。</span></span></p>
+<p><span><span>（注意，您也可以使用</span></span><a href="http://docs.python.org/3.3/library/functions.html#str"><code class="highlighter-rouge">str()</code></a><span><span>函數</span><span>以相反的方式將整數轉換為字符串</span><span>）</span></span></p>
+<p><span><span>第二：對字符串進行數學運算。</span><span>那是什麼意思<span> </span></span><span>我的意思是，如果我想組合（</span></span><strong><span><span>連接</span></span></strong><span><span>起來</span><span>就是計算機科學這個詞）字符串，我要做的就是添加它們：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	
+<span class="k">print</span><span class="p">(</span><span class="s">"Were"</span> <span class="o">+</span> <span class="s">"wolf"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Door"</span> <span class="o">+</span> <span class="s">"man"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"4"</span> <span class="o">+</span> <span class="s">"chan"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">"chan"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>乘法的工作原理相同：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="s">"test"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>但是除法和減法不是這樣的。</span><span>就乘法而言，將兩個字符串相乘的想法尚不明確。</span><span>首先將兩個字符串相乘是什麼意思？</span><span>但是，以某種方式指定將字符串乘以數字是有意義的-只需將該字符串重複該次數即可。</span><span>在您自己的程序中嘗試使用帶有數字和字符串的所有算術運算-嘗試一下什麼有效和什麼無效的最佳方法是嘗試一下！</span></span></p>
+<h3>p2</h3>
+<p>ODD OR EVEN</p>
+<div><i>input if types int equality comparison numbers mod</i></div>
+<p>Again, the exercise comes first (with a few extras if you want the extra challenge or want to spend more time), followed by a discussion. Enjoy!</p>
+<p>EXERCISE AND SOLUTIONS</p>
+<p>Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.<span> </span><em>Hint: how does an even / odd number react differently when divided by 2?</em></p>
+<p>Extras:</p>
+<ol>
+<li>If the number is a multiple of 4, print out a different message.</li>
+<li>Ask the user for two numbers: one number to check (call it<span> </span><code class="highlighter-rouge">num</code>) and one number to divide by (<code class="highlighter-rouge">check</code>). If<span> </span><code class="highlighter-rouge">check</code><span> </span>divides evenly into<span> </span><code class="highlighter-rouge">num</code>, tell that to the user. If not, print a different appropriate message</li>
+</ol>
+<p>.DISSCUSION</p>
+<p>Concepts for this week:</p>
+<ul>
+<li>Modular arithmetic (the modulus operator)</li>
+<li>Conditionals (if statements)</li>
+<li>Checking equality</li>
+</ul>
+<p>We have been doing arithmetic (addition, subtraction, multiplication, division) since elementary school, and often it is useful for us to find not the answer to a division problem but the remainder when we do a division operation. This operation is called the “modulus operation.” For example, when I divide 5 by 3, the remainder is 2, and the sentence reads like this: “5 modulo 3 is 2.”</p>
+<p>In the Python shell:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">1</span></code></pre>
+</figure>
+<p>The<span> </span><code class="highlighter-rouge">%</code><span> </span>sign is exactly the modulus operator.</p>
+<p>CONDITIONAL</p>
+<p>When a computer (or a program) needs to decide something, it checks whether some condition is satisfied, which is where the term<span> </span><strong>conditional</strong><span> </span>comes from. Conditionals are a fancy way of saying “if statements”. If Michele was born in New York, she has an American passport. That statement is a conditional (if statement) that in this case is true. In Python this works the same way:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated R movie"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">17</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated PG-13 movie"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"can only see rated PG movies"</span><span class="p">)</span></code></pre>
+</figure>
+<p>When the program gets to the<span> </span><code class="highlighter-rouge">if</code><span> </span>statement, it will check the value of the variable called<span> </span><code class="highlighter-rouge">age</code><span> </span>against all of the conditions, in order, and will print something to the screen accordingly. Note that<span> </span><code class="highlighter-rouge">elif</code><span> </span>is a portmanteau of “else” and “if”. So if the variable<span> </span><code class="highlighter-rouge">age</code><span> </span>holds the value 15, the statement<span> </span><code class="highlighter-rouge">"can see a rated PG-13 movie"</code><span> </span>will be printed to the screen.</p>
+<p>Note how the statement<span> </span><code class="highlighter-rouge">elif age &lt; 17 and age &gt; 12</code><span> </span>has the statement<span> </span><code class="highlighter-rouge">and</code><span> </span>- you can use<span> </span><code class="highlighter-rouge">or</code><span> </span>and<span> </span><code class="highlighter-rouge">not</code><span> </span>in the same way. Understanding a bit about logic and how it works, or being able to rationally think about logic will help you get the conditions right - oh, and a lot of practice.</p>
+<p>Links about conditionals:</p>
+<ul>
+<li><a href="http://docs.python.org/3.3/tutorial/controlflow.html">The official Python documentation</a></li>
+<li><a href="http://www.pythonforbeginners.com/basics/python-if-elif-else-statement/">Python for beginners explains conditionals</a></li>
+</ul>
+<p>CHEKING OR EQUALITY</p>
+<p>A fundamental thing you want to do with your program is check whether some number is equal to another. Say the user tells you how many questions they answered incorrectly on a practice exam, and depending on the number of correctly-answered questions, you can suggest a specific course of action. For integers, strings, floats, and many other variable types, this is done with a simple syntax:<span> </span><code class="highlighter-rouge">==</code>. To explicitly check inequality, use<span> </span><code class="highlighter-rouge">!=</code>.</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable has the value 3"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable does not have the value 3"</span><span class="p">)</span></code></pre>
+</figure>
+<p>Notice how in this example, the condition is redundant. In the first condition we are checking whether the variable<span> </span><code class="highlighter-rouge">a</code><span> </span>has the value 3 and in the second, we are checking whether<span> </span><code class="highlighter-rouge">a</code><span> </span>does NOT have the value 3. However, if the first condition is not true (<code class="highlighter-rouge">a</code><span> </span>is in fact not 3), then the second condition is by definition true. So a more efficient way to write the above conditional is like this:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable has the value 3"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable does not have the value 3"</span><span class="p">)</span></code></pre>
+</figure>
+<p>The same equality / inequality comparisons work for strings.</p>
+<p>Links about equality and comparators:]</p>
+<p><strong>基數或偶數</strong></p>
+<div><i><span><span>輸入類型是否等於相等比較數mod</span></span></i></div>
+<p><span><span>再次，練習是第一位的（如果您需要額外的挑戰或想要花費更多的時間，還可以進行一些其他操作），然後進行討論。</span><span>請享用！</span></span></p>
+<p><strong>練習2和解決方法</strong></p>
+<p><span><span>詢問用戶一個數字。</span><span>根據數字是偶數還是奇數，向用戶打印一條適當的消息。</span></span><em><span><span>提示：偶數/奇數除以2時的反應如何？</span></span></em></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>如果數字是4的倍數，請打印出另一條消息。</span></span></li>
+<li><span><span>向用戶詢問兩個數字：一個數字要檢查（稱為</span></span><code class="highlighter-rouge">num</code><span><span>），另一個數字要除以（</span></span><code class="highlighter-rouge">check</code><span><span>）。</span><span>如果</span></span><code class="highlighter-rouge">check</code><span><span>平均分為</span></span><code class="highlighter-rouge">num</code><span><span>，請告知用戶。</span><span>如果不是，請打印其他適當的消息。</span></span></li>
+</ol>
+<p><strong>討論區</strong></p>
+<p><span><span>本週的概念：</span></span></p>
+<ul>
+<li><span><span>模塊化算術（模運算符）</span></span></li>
+<li><span><span>有條件的（如果語句）</span></span></li>
+<li><span><span>檢查平等</span></span></li>
+</ul>
+<p><strong>模塊換算數</strong></p>
+<p><span><span>從小學開始，我們就一直在進行算術運算（加，減，乘，除），這對於我們尋找除法問題不是答案，而是對除法運算的其餘部分有用。</span><span>該操作稱為“模運算”。</span><span>例如，當我將5除以3時，餘數為2，句子的內容如下：“ 5模3為2”。</span></span></p>
+<p><span><span>在Python Shell中：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">1</span></code></pre>
+</figure>
+<p><span><span>該</span></span><code class="highlighter-rouge">%</code><span><span>標誌是完全模運算符。</span></span></p>
+<p><span><span>有條件</span></span></p>
+<p><span><span>當計算機（或程序）需要做出決定時，它會檢查是否滿足某些條件，這就是</span></span><strong><span><span>條件</span></span></strong><span><span>一詞的來源。</span><span>條件語句是說“ if語句”的一種奇特的方式。</span><span>如果米歇爾（Michele）出生於紐約，則她擁有美國護照。</span><span>該語句是在這種情況下為真的條件（如果語句）。</span><span>在Python中，這是相同的方式：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated R movie"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">17</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated PG-13 movie"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"can only see rated PG movies"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>當程序到達該</span></span><code class="highlighter-rouge">if</code><span><span>語句時，它將按</span></span><code class="highlighter-rouge">age</code><span><span>所有條件依次</span><span>檢查被調用的變量的值</span><span>，並將相應的內容打印到屏幕上。</span><span>請注意，這</span></span><code class="highlighter-rouge">elif</code><span><span>是“ else”和“ if”的組合。</span><span>因此，如果變量</span></span><code class="highlighter-rouge">age</code><span><span>保留值15，則該語句</span></span><code class="highlighter-rouge">"can see a rated PG-13 movie"</code><span><span>將被打印到屏幕上。</span></span></p>
+<p><span><span>請注意該語句如何</span></span><code class="highlighter-rouge">elif age &lt; 17 and age &gt; 12</code><span><span>具有該語句</span></span><code class="highlighter-rouge">and</code><span><span>-您可以使用</span></span><code class="highlighter-rouge">or</code><span><span>和</span></span><code class="highlighter-rouge">not</code><span><span>以相同的方式。</span><span>了解一些有關邏輯及其原理的知識，或者能夠理性地思考邏輯，將幫助您找到合適的條件-哦，還有很多練習。</span></span></p>
+<p><span><span>有關條件的鏈接：</span></span></p>
+<ul>
+<li><a href="http://docs.python.org/3.3/tutorial/controlflow.html"><span><span>官方Python文檔</span></span></a></li>
+<li><span><span><a href="http://www.pythonforbeginners.com/basics/python-if-elif-else-statement/">初學者使用Python解釋條件</a></span></span></li>
+</ul>
+<p><strong>檢查是否相等</strong></p>
 <p></p>
-<h1>組員名單</h1>
-<p>=======</p>
-<p>40923105 12/25</p>
+<p><span><span>查是否相等</span></span><span><span>您要對程序執行的基本操作是檢查某個數字是否等於另一個數字。</span><span>假設用戶告訴您在練習考試中有多少個錯誤回答的問題，並且根據正確回答的問題數，您可以提出具體的操作建議。</span><span>對於整數，字符串，浮點數和許多其他變量類型，這是通過簡單的語法完成的：</span></span><code class="highlighter-rouge">==</code><span><span>。</span><span>要顯式檢查不平等，請使用</span></span><code class="highlighter-rouge">!=</code><span><span>。</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable has the value 3"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable does not have the value 3"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>請注意，在此示例中，條件是多餘的。</span><span>在第一個條件中，我們正在檢查變量是否</span></span><code class="highlighter-rouge">a</code><span><span>具有值3，在第二個</span><span>條件中，我們正在檢查變量</span><span>是否</span></span><code class="highlighter-rouge">a</code><span><span>不具有值3。但是，如果第一個條件不成立（</span></span><code class="highlighter-rouge">a</code><span><span>實際上不是3），則第二個條件根據定義，條件是正確的。</span><span>因此，編寫上述條件的更有效方法如下：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable has the value 3"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable does not have the value 3"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>相同的相等/不相等比較適用於字符串。</span></span></p>
+<p><span><span>有關相等性和比較器的鏈接：</span></span></p>
+<h3><span><span>P3</span></span></h3>
+<p><span><span>LISS LES THAN TEN</span></span></p>
+<div><i>list numbers elements if conditional</i></div>
+<div><i></i></div>
+<div><i>EXERCISE3</i></div>
+<p>Take a list, say for example this one:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span></code></pre>
+</figure>
+<p>and write a program that prints out all the elements of the list that are less than 5.</p>
+<p>Extras:</p>
+<ol>
+<li>Instead of printing the elements one by one, make a new list that has all the elements less than 5 from this list in it and print out this new list.</li>
+<li>Write this in one line of Python.</li>
+<li>Ask the user for a number and return a list that contains only elements from the original list<span> </span><code class="highlighter-rouge">a</code><span> </span>that are smaller than that number given by the user.</li>
+</ol>
+<p><span>DISSCUSION</span></p>
+<p>This week’s topics:</p>
+<ol>
+<li>Lists</li>
+<li>More conditionals (if statements)</li>
+</ol>
+<p>LISTS</p>
+<p>This week’s exercise hits on a topic critical for all types and styles of programming:<span> </span><strong>lists</strong>. Lists are basically an ordered way of grouping things (called<span> </span><strong>elements</strong>) - the cool thing about lists in Python is that you can have a list that contains objects of multiple types. Your list can mix between strings, integers, objects, other lists, what have you.</p>
+<p>The way to construct an empty list is just to do</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+</figure>
+<p>And your variable<span> </span><code class="highlighter-rouge">x</code><span> </span>now holds an empty list. To add things to this list, just “append” them to the list. Like so:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span></code></pre>
+</figure>
+<p>Your list<span> </span><code class="highlighter-rouge">x</code><span> </span>now looks like<span> </span><code class="highlighter-rouge">[3]</code>.</p>
+<p>In Python, lists are also<span> </span><strong>iterables</strong>, which means you can loop through them with a<span> </span><strong>for loop</strong><span> </span>in a convenient way. (If you come from other languages like C++ or Java you are most likely used to using a counter to loop through indices of a list - in Python you can actually loop through the elements.) I will let the code speak for itself:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">"Michele"</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span></code></pre>
+</figure>
+<p>Will yield the result:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">1 
+3
+"Michele"
+[5, 6, 7]</code></pre>
+</figure>
+<p>There are many other properties of lists, but for the basic exercise all you should need is this for loop property. Future weeks will address other properties of lists.</p>
+<p>For more information about lists in Python, check out these resources:</p>
+<ul>
+<li><a href="http://docs.python.org/3.3/tutorial/datastructures.html">The official Python documentation on lists</a></li>
+<li><a href="http://www.tutorialspoint.com/python/python_lists.htm">Tutorialspoint on Python lists</a></li>
+<li><a href="http://effbot.org/zone/python-list.htm">Someone else’s blog post about lists</a></li>
+</ul>
+<p>MORE CONDITIONAL</p>
+<p>The nice thing about conditionals is that they follow logical operations. They can also be used to test equality. Let’s do a small example. Let’s say I want to make a piece of code that converts from a numerical grade (1-100) to a letter grade (A, B, C, D, F). The code would look like this:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">grade</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your grade: "</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"A"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"B"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"C"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"D"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"F"</span><span class="p">)</span></code></pre>
+</figure>
+<p>What happens if<span> </span><code class="highlighter-rouge">grade</code><span> </span>is 50? All the conditions are false, so<span> </span><code class="highlighter-rouge">"F"</code><span> </span>gets printed on the screen. But what if<span> </span><code class="highlighter-rouge">grade</code><span> </span>is 95? Then all the conditions are true and everything gets printed, right? Nope! What happens is the program goes line by line. The first condition (grade &gt;= 90) is satisfied, so the program enters into the code inside the<span> </span><code class="highlighter-rouge">if</code><span> </span>statement, executing<span> </span><code class="highlighter-rouge">print("A")</code>. Once code inside a conditional has been executed, the rest of the conditions are skipped and none of the other conditionals are checked.</p>
+<p><strong>列出少於10</strong></p>
+<div><i><span><span>如果有條件，則列出數字元素</span></span></i></div>
+<h2><span><span> </span></span></h2>
+<p><strong>練習3和解決方法</strong></p>
+<p><strong>例如說一個</strong></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>並編寫一個程序，打印出列表中小於5的所有元素。</span></span></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>而不是一個一個地打印元素，而是創建一個新列表，其中該列表中的所有元素少於5個，然後打印出該新列表。</span></span></li>
+<li><span><span>用一行Python編寫。</span></span></li>
+<li><span><span>向用戶詢問一個數字，然後返回一個列表，該列表僅包含原始列表</span></span><code class="highlighter-rouge">a</code><span><span>中小於用戶給定數字的</span><span>元素</span><span>。</span></span></li>
+</ol>
+<p><span><span>討論區</span></span></p>
+<p><span><span>本週主題：</span></span></p>
+<ol>
+<li><span><span>清單</span></span></li>
+<li><span><span>更多條件（如果語句）</span></span></li>
+</ol>
+<p><span><span>清單</span></span></p>
+<p><span><span>本週的練習涉及一個對所有類型和風格的編程都至關重要的主題：</span></span><strong><span><span>list</span></span></strong><span><span>。</span><span>列表基本上是一種將事物（稱為</span></span><strong><span><span>elements</span></span></strong><span><span>）</span><span>進行分組的有序方式-Python中</span><span>列表的最酷的事情是，您可以擁有一個包含多種類型的對象的列表。</span><span>您的列表可以混合在字符串，整數，對象，其他列表之間，包括您所擁有的。</span></span></p>
+<p><span><span>構造一個空列表的方法就是</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+</figure>
+<p><span></span><code class="highlighter-rouge">x</code><span><span>現在</span><span>，您的變量</span><span>包含一個空列表。</span><span>要將內容添加到此列表中，只需將它們“添加”到列表中即可。</span><span>像這樣：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>您的清單</span></span><code class="highlighter-rouge">x</code><span><span>現在看起來像</span></span><code class="highlighter-rouge">[3]</code><span><span>。</span></span></p>
+<p><span><span>在Python中，列表也是</span></span><strong><span><span>可迭代的</span></span></strong><span><span>，這意味著您可以</span><span>方便地</span><span>使用</span></span><strong><span><span>for循環</span></span></strong><span><span>遍歷它們</span><span>。</span><span>（如果您來自其他語言，例如C ++或Java，則最有可能習慣於使用計數器循環遍歷列表的索引-在Python中，您實際上可以循環遍曆元素。）我將讓代碼說明自己：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">"Michele"</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>將產生結果：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">1 <span></span>
+3<span></span>
+"Michele"<span></span>
+[5, 6, 7]</code></pre>
+</figure>
+<p><span><span>列表還有許多其他屬性，但是對於基本練習而言，您只需要此for循環屬性。</span><span>未來幾週將處理列表的其他屬性。</span></span></p>
+<p><span><span>有關Python中列表的更多信息，請查看以下資源：</span></span></p>
+<ul>
+<li><a href="http://docs.python.org/3.3/tutorial/datastructures.html"><span><span>列表中的官方Python文檔</span></span></a></li>
+<li><a href="http://www.tutorialspoint.com/python/python_lists.htm"><span><span>Python清單上的Tutorialspoint</span></span></a></li>
+<li><span><span><a href="http://effbot.org/zone/python-list.htm">他人關於列表的博客文章</a></span></span></li>
+</ul>
+<p><strong>更多條件</strong></p>
+<p><span><span>關於條件的好處是它們遵循邏輯運算。</span><span>它們也可以用於測試相等性。</span><span>讓我們做一個小例子。</span><span>假設我要編寫一段代碼，將其從數字等級（1-100）轉換為字母等級（A，B，C，D，F）。</span><span>代碼如下所示：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">grade</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your grade: "</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"A"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"B"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"C"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"D"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"F"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>如果</span></span><code class="highlighter-rouge">grade</code><span><span>是50，</span><span>會發生什麼</span><span>？</span><span>所有條件均為假，因此</span></span><code class="highlighter-rouge">"F"</code><span><span>將其打印在屏幕上。</span><span>但是，如果</span></span><code class="highlighter-rouge">grade</code><span><span>是95，該怎麼辦？</span><span>然後所有條件都成立，一切都打印出來了，對吧？</span><span>不！</span><span>程序將逐行執行。</span><span>滿足第一個條件（等級&gt; = 90），因此程序將輸入</span></span><code class="highlighter-rouge">if</code><span><span>語句</span><span>內的代碼</span><span>，執行</span></span><code class="highlighter-rouge">print("A")</code><span><span>。</span><span>一旦執行了條件語句中的代碼，將跳過其餘條件，並且不檢查其他條件。</span></span></p>
+<h3><span><span>P4</span></span></h3>
+<p>DIVISORSE</p>
+<div><br/><i></i></div>
+<div>EXECISE FOUR</div>
+<p>Create a program that asks the user for a number and then prints out a list of all the divisors of that number. (If you don’t know what a<span> </span><em>divisor</em><span> </span>is, it is a number that divides evenly into another number. For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)</p>
+<p>DISCOSIONE</p>
+<p>The topics that you need for this exercise combine lists, conditionals, and user input. There is a new concept of creating lists.</p>
+<p>There is an easy way to programmatically create lists of numbers in Python.</p>
+<p>To create a list of numbers from 2 to 10, just use the following code:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span></code></pre>
+</figure>
+<p>Then the variable<span> </span><code class="highlighter-rouge">x</code><span> </span>will contain the list<span> </span><code class="highlighter-rouge">[2, 3, 4, 5, 6, 7, 8, 9, 10]</code>. Note that the second number in the<span> </span><code class="highlighter-rouge">range()</code><span> </span>function is not included in the original list.</p>
+<p>Now that<span> </span><code class="highlighter-rouge">x</code><span> </span>is a list of numbers, the same for loop can be used with the list:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span> 
+    <span class="k">print</span> <span class="n">elem</span></code></pre>
+</figure>
+<p>Will yield the result:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  10</code></pre>
+</figure>
+<p><strong>除數</strong></p>
+<div><br/><i></i></div>
+<div><strong>練習4和解決方法</strong></div>
+<p><span><span>創建一個程序，詢問用戶一個數字，然後打印出該數字的所有除數的列表。</span><span>（如果您不知道</span></span><em><span><span>除數</span></span></em><span><span>是多少，該數字將被除以另一個數。例如，13是26的除數，因為26/13沒有餘數。）</span></span></p>
+<p><strong>討論區</strong></p>
+<p><span><span>本練習需要的主題包括列表，條件和用戶輸入。</span><span>有一個創建列表的新概念。</span></span></p>
+<p><span><span>有一種簡便的方法可以在Python中以編程方式創建數字列表。</span></span></p>
+<p><span><span>要創建2到10的數字列表，只需使用以下代碼：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>然後，變量</span></span><code class="highlighter-rouge">x</code><span><span>將包含列表</span></span><code class="highlighter-rouge">[2, 3, 4, 5, 6, 7, 8, 9, 10]</code><span><span>。</span><span>請注意，</span></span><code class="highlighter-rouge">range()</code><span><span>函數</span><span>中的第二個數字</span><span>不包括在原始列表中。</span></span></p>
+<p><span><span>現在這</span></span><code class="highlighter-rouge">x</code><span><span>是一個數字列表，該列表可以使用相同的for循環：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span> 
+    <span class="k">print</span> <span class="n">elem</span></code></pre>
+</figure>
+<p><span><span>將產生結果：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  2<span></span>
+  3<span></span>
+  4<span></span>
+  5<span></span>
+  6<span></span>
+  7<span></span>
+  8<span></span>
+  9<span></span>
+  10<br/><br/></code></pre>
+</figure>
+<h3>P5</h3>
+<p>LIST OVER LAPS</p>
+<div><br/><i></i></div>
+<div>EXERCISE FIVE</div>
+<p>Take two lists, say for example these two:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
+</figure>
+<p>and write a program that returns a list that contains only the elements that are common between the lists (without duplicates). Make sure your program works on two lists of different sizes.</p>
+<p>Extras:</p>
+<ol>
+<li>Randomly generate two lists to test this</li>
+<li>Write this in one line of Python (don’t worry if you can’t figure this out at this point - we’ll get to it soon)</li>
+</ol>
+<p>LIST PROPERTISE</p>
+<p>In other words, “things you can do with lists.”</p>
+<p>One of the interesting things you can do with lists in Python is figure out whether something is inside the list or not. For example:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20]
+  &gt;&gt;&gt; 10 in a
+  True
+  &gt;&gt;&gt; 3 in a
+  False</code></pre>
+</figure>
+<p>You can of course use this in loops, conditionals, and any other programming constructs.</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">list_of_students</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Michele"</span><span class="p">,</span> <span class="s">"Sara"</span><span class="p">,</span> <span class="s">"Cassie"</span><span class="p">]</span>
+
+  <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Type name to check: "</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">list_of_students</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"This student is enrolled."</span><span class="p">)<br/><br/><strong>清單重疊</strong></span></code></pre>
+<div><br/><i></i></div>
+<div>練習五合解決方法</div>
+<p><span><span>拿兩個列表，舉例來說，這兩個：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>並編寫一個程序，該程序返回一個列表，該列表僅包含列表之間的公共元素（無重複項）。</span><span>確保您的程序可以在兩個不同大小的列表上運行。</span></span></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>隨機生成兩個列表進行測試</span></span></li>
+<li><span><span>用Python的一行代碼編寫（不要擔心，如果您現在不能解決這個問題，我們會盡快處理）</span></span></li>
+</ol>
+<p><span><span>列出屬性</span></span></p>
+<p><span><span>換句話說，“您可以使用列表執行的操作”。</span></span></p>
+<p><span><span>您可以使用Python中的列表進行有趣的操作之一，就是確定列表中是否包含某些內容。</span><span>例如：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20]<span></span>
+  &gt;&gt;&gt; 10 in a<span></span>
+  True<span></span>
+  &gt;&gt;&gt; 3 in a<span></span>
+  False</code></pre>
+</figure>
+<p><span><span>您當然可以在循環，條件和任何其他編程構造中使用它。</span></span></p>
+<pre><code class="language-python" data-lang="python">  <span class="n">list_of_students</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Michele"</span><span class="p">,</span> <span class="s">"Sara"</span><span class="p">,</span> <span class="s">"Cassie"</span><span class="p">]</span>
+
+  <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Type name to check: "</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">list_of_students</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"This student is enrolled."</span><span class="p">)</span></code></pre>
+<code class="language-python" data-lang="python"><span class="p"><br/></span></code>
+</figure>
+<h3>P6</h3>
+<p>字串清單</p>
+<div><i><span><span>字符串列表索引</span></span></i></div>
+<div><strong><i>練習六和解決方法</i></strong></div>
+<p><span><span>向用戶詢問一個字符串，然後打印出該字符串是否是回文。</span><span>（</span></span><strong><span><span>回文</span></span></strong><span><span>是指向前和向後讀取相同字符串的字符串。）</span></span></p>
+<p><strong>討論區</strong></p>
+<p><span><span>本週的概念：</span></span></p>
+<ul>
+<li><span><span>列表索引</span></span></li>
+<li><span><span>字符串是列表</span></span></li>
+</ul>
+<p><span><span>列表索引</span></span></p>
+<p><span><span>在Python（以及大多數通用編程）中，您從數字0開始計數列表。列表中的第一個元素是“數字0”，第二個元素是“數字1”，依此類推。</span></span></p>
+<p><span><span>結果，當您要從列表中刪除單個元素時，可以向列表中請求該number元素：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25]<span></span>
+  &gt;&gt;&gt; a[3]<span></span>
+  20<span></span>
+  &gt;&gt;&gt; a[0]<span></span>
+  5</code></pre>
+</figure>
+<p><span><span>還有一種便捷的方法來獲取兩個索引之間的子列表：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25, 30, 35, 40]<span></span>
+  &gt;&gt;&gt; a[1:4]<span></span>
+  [10, 15, 20]<span></span>
+  &gt;&gt;&gt; a[6:]<span></span>
+  [35, 40]<span></span>
+  &gt;&gt;&gt; a[:-1]<span></span>
+  [5, 10, 15, 20, 25, 30, 35]</code></pre>
+</figure>
+<p><span><span>第一個數字是“開始索引”，最後一個數字是“結束索引”。</span></span></p>
+<p><span><span>您還可以在索引中包含第三個數字，以計算應該從列表中讀取的頻率：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25, 30, 35, 40]<span></span>
+  &gt;&gt;&gt; a[1:5:2]<span></span>
+  [10, 20]<span></span>
+  &gt;&gt;&gt; a[3:0:-1]<span></span>
+  [15, 10, 5]</code></pre>
+</figure>
+<p><span><span>要閱讀整個列表，只需使用變量名（在上面的示例中</span></span><code class="highlighter-rouge">a</code><span><span>），或者也可以</span></span><code class="highlighter-rouge">[:]</code><span><span>在變量名的末尾</span><span>使用</span><span>（在以上示例中的</span></span><code class="highlighter-rouge">a[:]</code><span><span>）。</span></span></p>
+<p><strong>字符串是列表</strong></p>
+<p><span><span>因為字符串是列表，所以您可以將對列表所做的所有操作都字符串化。</span><span>您可以遍歷它們：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">string</span> <span class="o">=</span> <span class="s">"example"</span>
+  <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span> 
+    <span class="k">print</span> <span class="s">"one letter: "</span> <span class="o">+</span> <span class="n">c</span></code></pre>
+</figure>
+<p><span><span>將給出結果：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  one letter: e<span></span>
+  one letter: x<span></span>
+  one letter: a<span></span>
+  one letter: m<span></span>
+  one letter: p<span></span>
+  one letter: l<span></span>
+  one letter: e</code></pre>
+</figure>
+<p><span><span>您可以列出子列表：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; string = "example"<span></span>
+  &gt;&gt;&gt; s = string[0:5]<span></span>
+  &gt;&gt;&gt; print s<span></span>
+  examp</code></pre>
+</figure>
+<p><span><span>現在，其中</span></span><code class="highlighter-rouge">s</code><span><span>包含字符串“ examp”。</span></span></p>
+<p><span><span>故事的寓意：字符串是一個列表。</span></span></p>
+<p><strong>STRING LIST</strong></p>
+<div><i>strings lists index</i></div>
+<div><i> </i></div>
+<div><i>EXERCISE LIST</i></div>
+<p>Ask the user for a string and print out whether this string is a palindrome or not. (A<span> </span><strong>palindrome</strong><span> </span>is a string that reads the same forwards and backwards.)</p>
+<p>DISCUSION</p>
+<p>Concepts for this week:</p>
+<ul>
+<li>List indexing</li>
+<li>Strings are lists</li>
+</ul>
+<p></p>
+<p>In Python (and most programming in general), you start counting lists from the number 0. The first element in a list is “number 0”, the second is “number 1”, etc.</p>
+<p>As a result, when you want to get single elements out of a list, you can ask a list for that number element:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25]
+  &gt;&gt;&gt; a[3]
+  20
+  &gt;&gt;&gt; a[0]
+  5</code></pre>
+</figure>
+<p>There is also a convenient way to get sublists between two indices:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25, 30, 35, 40]
+  &gt;&gt;&gt; a[1:4]
+  [10, 15, 20]
+  &gt;&gt;&gt; a[6:]
+  [35, 40]
+  &gt;&gt;&gt; a[:-1]
+  [5, 10, 15, 20, 25, 30, 35]</code></pre>
+</figure>
+<p>The first number is the “start index” and the last number is the “end index.”</p>
+<p>You can also include a third number in the indexing, to count how often you should read from the list:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25, 30, 35, 40]
+  &gt;&gt;&gt; a[1:5:2]
+  [10, 20]
+  &gt;&gt;&gt; a[3:0:-1]
+  [15, 10, 5]</code></pre>
+</figure>
+<p>To read the whole list, just use the variable name (in the above examples,<span> </span><code class="highlighter-rouge">a</code>), or you can also use<span> </span><code class="highlighter-rouge">[:]</code><span> </span>at the end of the variable name (in the above examples,<span> </span><code class="highlighter-rouge">a[:]</code>).</p>
+<p><strong>STRING LISTS</strong></p>
+<p>Because strings are lists, you can do to strings everything that you do to lists. You can iterate through them:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">string</span> <span class="o">=</span> <span class="s">"example"</span>
+  <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span> 
+    <span class="k">print</span> <span class="s">"one letter: "</span> <span class="o">+</span> <span class="n">c</span></code></pre>
+</figure>
+<p>Will give the result:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  one letter: e
+  one letter: x
+  one letter: a
+  one letter: m
+  one letter: p
+  one letter: l
+  one letter: e</code></pre>
+</figure>
+<p>You can take sublists:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; string = "example"
+  &gt;&gt;&gt; s = string[0:5]
+  &gt;&gt;&gt; print s
+  examp</code></pre>
+</figure>
+<p>Now<span> </span><code class="highlighter-rouge">s</code><span> </span>has the string “examp” in it.</p>
+<p>Moral of the story: a string is a list.</p>
+<p></p>
+<h2>H3(All Solutions)</h2>
+<h3>P1</h3>
+<p>CHARACTER IN PUT SOLUTION</p>
+<div><i></i></div>
+<p>Because I cannot include every single submission I get, I will choose one or two that are example answers and include those within each post.</p>
+<p><strong>EXERCISE 1</strong></p>
+<p>Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will turn 100 years old.</p>
+<p><strong>輸入解決方案</strong></p>
+<p><span><span>由於我無法將收到的每份意見書都包括在內，因此我將選擇一個或兩個作為示例答案，並在每個帖子中包括這些答案。</span></span></p>
+<p><strong>練習1</strong></p>
+<p><span><span>創建一個程序，要求用戶輸入他們的姓名和年齡。</span><span>打印給他們的消息，告訴他們他們將滿100歲的年份。</span></span></p>
+<h3>P2</h3>
+<p><strong>ODD OR EVEN SOLUTIONS</strong></p>
+<p><strong>EXERCISES 2</strong></p>
+<p>Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.</p>
+<p><em>Hint: how does an even / odd number react differently when divided by 2?</em></p>
+<p>Extras:</p>
+<ol>
+<li>If the number is a multiple of 4, print out a different message.</li>
+<li>Ask the user for two numbers: one number to check (call it<span> </span><code class="highlighter-rouge">num</code>) and one number to divide by (<code class="highlighter-rouge">check</code>). If<span> </span><code class="highlighter-rouge">check</code><span> </span>divides evenly into<span> </span><code class="highlighter-rouge">num</code>, tell that to the user. If not, print a different appropriate message.</li>
+</ol>
+<p>SAMPLE SOLUTION</p>
+<p>There are many ways of doing the exercise, so I am posting a few sample solutions. The very basics:</p>
+<div class="gist" id="gist8838738">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-02">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-02-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC1">num = input("Enter a number: ")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-02-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC2">mod = num % 2</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-02-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC3">if mod &gt; 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-02-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC4">print("You picked an odd number.")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-02-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC5">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-02-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC6">print("You picked an even number.")</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/8838738/raw/93c6445ce316897938f6ed990602951ac8368bae/02">view raw</a><a href="https://gist.github.com/anonymous/8838738#file-02">02</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a></div>
+</div>
+</div>
+<p>And something that looks slightly more complex (but is just a more complicated conditional):</p>
+<div class="gist" id="gist8911985">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-gistfile1-txt">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-gistfile1-txt-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC1">num = int(input("give me a number to check: "))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-gistfile1-txt-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC2">check = int(input("give me a number to divide by: "))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-gistfile1-txt-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC3"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-gistfile1-txt-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC4">if num % 4 == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-gistfile1-txt-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC5">print(num, "is a multiple of 4")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-gistfile1-txt-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC6">elif num % 2 == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-gistfile1-txt-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC7">print(num, "is an even number")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-gistfile1-txt-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC8">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-gistfile1-txt-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC9">print(num, "is an odd number")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-gistfile1-txt-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC10"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-gistfile1-txt-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC11">if num % check == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-gistfile1-txt-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC12">print(num, "divides evenly by", check)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-gistfile1-txt-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC13">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="14" id="file-gistfile1-txt-L14"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC14">print(num, "does not divide evenly by", check)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>基數或偶數解</strong></p>
+<p><strong>練習2</strong></p>
+<p><span><span>詢問用戶一個數字。</span><span>根據數字是偶數還是奇數，向用戶打印一條適當的消息。</span></span></p>
+<p><em><span><span>提示：偶數/奇數除以2時的反應如何？</span></span></em></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>如果數字是4的倍數，請打印出另一條消息。</span></span></li>
+<li><span><span>向用戶詢問兩個數字：一個數字要檢查（稱為</span></span><code class="highlighter-rouge">num</code><span><span>），另一個數字要除以（</span></span><code class="highlighter-rouge">check</code><span><span>）。</span><span>如果</span></span><code class="highlighter-rouge">check</code><span><span>平均分為</span></span><code class="highlighter-rouge">num</code><span><span>，請告知用戶。</span><span>如果不是，請打印其他適當的消息。</span></span><span><span></span></span></li>
+</ol>
+<p><strong>樣品</strong></p>
+<p><span><span>進行練習的方法有很多，因此我將發布一些示例解決方案。</span><span>基本知識：</span></span></p>
+<div class="gist" id="gist8838738">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-02">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-02-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC1"><span><span>num = input（“輸入數字：”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-02-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC2"><span><span>mod = num％2</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-02-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC3"><span><span>如果mod&gt; 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-02-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC4"><span><span> 打印（“您選擇了一個奇數。”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-02-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC5"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-02-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC6"><span><span> 打印（“您選擇了一個偶數。”）</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/8838738/raw/93c6445ce316897938f6ed990602951ac8368bae/02"><span><span>查看原始</span></span></a><a href="https://gist.github.com/anonymous/8838738#file-02"><span><span>02</span></span></a><span><span><span> </span>通過託管與❤<span> </span></span></span><a href="https://github.com/"><span><span>GitHub上</span></span></a></div>
+</div>
+</div>
+<p><span><span>看起來稍微複雜一些（但只是條件更複雜）：</span></span></p>
+<div class="gist" id="gist8911985">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-gistfile1-txt">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-gistfile1-txt-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC1"><span><span>num = int（input（“給我一個要檢查的數字：”））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-gistfile1-txt-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC2"><span><span>check = int（input（“給我一個數字除以：”））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-gistfile1-txt-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC3"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-gistfile1-txt-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC4"><span><span>如果num％4 == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-gistfile1-txt-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC5"><span><span> print（num，“是4的倍數”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-gistfile1-txt-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC6"><span><span>elif num％2 == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-gistfile1-txt-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC7"><span><span> 打印（數字，“是偶數”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-gistfile1-txt-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC8"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-gistfile1-txt-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC9"><span><span> print（num，“是一個奇數”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-gistfile1-txt-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC10"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-gistfile1-txt-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC11"><span><span>如果num％check == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-gistfile1-txt-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC12"><span><span> 打印（數字，“均分”，選中）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-gistfile1-txt-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC13"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="14" id="file-gistfile1-txt-L14"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC14"><span><span> 打印（數字，“不均勻地除以”，檢查）</span></span></td>
+</tr>
+</tbody>
+</table>
+<h3 class="pagetitle">P3</h3>
+<p><strong>LIST LESS THAN SOLUTIONS TEN</strong></p>
+<p><strong>EXERCISE</strong></p>
+<p>Take a list, say for example this one:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span></code></pre>
+</figure>
+<p>and write a program that prints out all the elements of the list that are less than 5.</p>
+<p>Extras:</p>
+<ol>
+<li>Instead of printing the elements one by one, make a new list that has all the elements less than 5 from this list in it and print out this new list.</li>
+<li>Write this in one line of Python.</li>
+<li>Ask the user for a number and return a list that contains only elements from the original list<span> </span><code class="highlighter-rouge">a</code><span> </span>that are smaller than that number given by the user.</li>
+</ol>
+<p><strong>SAMPALE SOLUTION</strong></p>
+<p>I will note that none of the solutions that were submitted were written in one line of Python. There will be more exercises later that show you how to do this!</p>
+<p>Here is a sample solution that solves the exercise, including extras 1 and 3.</p>
+<p><strong>列出少於10個解決方案</strong></p>
+<p><strong>練習3</strong></p>
+<p><span><span>拿一個清單，例如說一個：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>並編寫一個程序，打印出列表中小於5的所有元素。</span></span></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>而不是一個一個地打印元素，而是創建一個新列表，其中該列表中的所有元素少於5個，然後打印出該新列表。</span></span></li>
+<li><span><span>用一行Python編寫。</span></span></li>
+<li><span><span>向用戶詢問一個數字，然後返回一個列表，該列表僅包含原始列表</span></span><code class="highlighter-rouge">a</code><span><span>中小於用戶給定數字的</span><span>元素</span><span>。</span></span></li>
+</ol>
+<p><strong>樣品</strong></p>
+<p><span><span>溶液</span></span><span><span>我將注意到，提交的解決方案都不是用Python的一行編寫的。</span><span>稍後會有更多練習向您展示如何執行此操作！</span></span></p>
+<p><span><span>這是解決該練習的示例解決方案，包括附加功能1和3。</span></span></p>
+<h3>P4</h3>
+<p><strong>EXERCISE 4</strong></p>
+<p><strong>SAMPALE SOLUTION</strong></p>
+<p>Create a program that asks the user for a number and then prints out a list of all the divisors of that number. (If you don’t know what a<span> </span><em>divisor</em><span> </span>is, it is a number that divides evenly into another number. For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)</p>
+<p></p>
+<div class="gist" id="gist9269773">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-practice-python-excersise-4-divisors">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-practice-python-excersise-4-divisors-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC1">__author__ = 'jeffreyhunt'</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-practice-python-excersise-4-divisors-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC2"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-practice-python-excersise-4-divisors-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC3">num = int(input("Please choose a number to divide: "))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-practice-python-excersise-4-divisors-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC4"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-practice-python-excersise-4-divisors-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC5">listRange = list(range(1,num+1))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-practice-python-excersise-4-divisors-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-practice-python-excersise-4-divisors-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC7">divisorList = []</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-practice-python-excersise-4-divisors-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC8"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-practice-python-excersise-4-divisors-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC9">for number in listRange:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-practice-python-excersise-4-divisors-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC10">if num % number == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-practice-python-excersise-4-divisors-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC11">divisorList.append(number)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-practice-python-excersise-4-divisors-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC12"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-practice-python-excersise-4-divisors-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC13">print(divisorList)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/jeffhunt/9269773/raw/29cd4515ddb89cd5b1440597625cf41e3d3ee957/Practice%20Python%20-%20Excersise%204:%20Divisors">view raw</a><a href="https://gist.github.com/jeffhunt/9269773#file-practice-python-excersise-4-divisors">Practice Python - Excersise 4: Divisors</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a></div>
+</div>
+</div>
+<p>There were a number of tricky things with this exercise. First, the type conversions between input strings and integers for the<span> </span><code class="highlighter-rouge">range()</code><span> </span>function need to be carefully output. Second, the arguments to<span> </span><code class="highlighter-rouge">range()</code><span> </span>had to be carefully constructed to cover all the possible numbers. Third, the condition in the<span> </span><code class="highlighter-rouge">if</code><span> </span>statement had to be correct as well.</p>
+<p><strong>除數解決方案</strong></p>
+<p><strong>練習4</strong></p>
+<span></span>
+<p><span><span>數解決方案</span></span><span><span>創建一個程序，詢問用戶一個數字，然後打印出該數字的所有除數的列表。</span><span>（如果您不知道</span></span><em><span><span>除數</span></span></em><span><span>是多少，它是一個平均除以另一個數的數字。例如，13是26的除數，因為26/13沒有餘數。）</span></span></p>
+<p><strong>樣品</strong></p>
+<div class="gist" id="gist9269773">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-practice-python-excersise-4-divisors">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-practice-python-excersise-4-divisors-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC1"><span><span>__author__ ='jeffreyhunt'</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-practice-python-excersise-4-divisors-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC2"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-practice-python-excersise-4-divisors-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC3"><span><span>num = int（input（“請選擇一個要除的數字：”））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-practice-python-excersise-4-divisors-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC4"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-practice-python-excersise-4-divisors-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC5"><span><span>listRange = list（範圍（1，num + 1））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-practice-python-excersise-4-divisors-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-practice-python-excersise-4-divisors-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC7"><span><span>divisorList = []</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-practice-python-excersise-4-divisors-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC8"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-practice-python-excersise-4-divisors-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC9"><span><span>用於listRange中的數字：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-practice-python-excersise-4-divisors-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC10"><span><span> 如果num％number == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-practice-python-excersise-4-divisors-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC11"><span><span> divisorList.append（number）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-practice-python-excersise-4-divisors-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC12"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-practice-python-excersise-4-divisors-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC13"><span><span>打印（divisorList）</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/jeffhunt/9269773/raw/29cd4515ddb89cd5b1440597625cf41e3d3ee957/Practice%20Python%20-%20Excersise%204:%20Divisors"><span><span>查看原始</span></span></a><a href="https://gist.github.com/jeffhunt/9269773#file-practice-python-excersise-4-divisors"><span><span>實踐Python的- Excersise 4：除數</span></span></a><span><span><span> </span>託管與❤通過</span></span><a href="https://github.com/"><span><span>GitHub上</span></span></a></div>
+</div>
+</div>
+<p><span><span>這項練習有很多棘手的事情。</span><span>首先，</span></span><code class="highlighter-rouge">range()</code><span><span>需要仔細輸出函數的</span><span>輸入字符串和整數之間的類型轉換</span><span>。</span><span>其次，</span></span><code class="highlighter-rouge">range()</code><span><span>必須仔細構造</span><span>論據以</span><span>涵蓋所有可能的數字。</span><span>第三，</span></span><code class="highlighter-rouge">if</code><span><span>聲明中</span><span>的條件</span><span>也必須正確。</span></span></p>
+<h3><span><span>P5</span></span></h3>
+<p><span><span>LIST OVERLAP SOLUTIONS</span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>EXERCISE 5<i></i></div>
+<p>Take two lists, say for example these two:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
+</figure>
+<p>and write a program that returns a list that contains only the elements that are common between the lists (without duplicates). Make sure your program works on two lists of different sizes.</p>
+<p><strong>列表重疊解決方案</strong></p>
+<div><strong>練習5</strong><i></i></div>
+<p><span><span>拿兩個列表，舉例來說，這兩個：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>並編寫一個程序，該程序返回一個列表，該列表僅包含列表之間的公共元素（無重複項）。</span><span>確保您的程序可以在兩個不同大小的列表上運行。</span></span></p>
+<h3><span><span>P6</span></span></h3>
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<p><strong>STRING LIST SOLUTIONS</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><strong></strong>
+<div><strong>EXCERCISE5</strong><i></i></div>
+<p>Ask the user for a string and print out whether this string is a palindrome or not. (A<span> </span><strong>palindrome</strong><span> </span>is a string that reads the same forwards and backwards.)</p>
+<p><strong>SAMPLE SOLUTIONS</strong></p>
+<div class="gist" id="gist9587781">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-palinfrome-test">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-palinfrome-test-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC1">wrd=input("Please enter a word")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-palinfrome-test-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC2">wrd=str(wrd)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-palinfrome-test-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC3">rvs=wrd[::-1]</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-palinfrome-test-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC4">print(rvs)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-palinfrome-test-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC5">if wrd == rvs:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-palinfrome-test-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC6">print("This word is a palindrome")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-palinfrome-test-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC7">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-palinfrome-test-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC8">print("This word is not a palindrome")</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/9587781/raw/f83c89024001d949aabd78ee50681ff75d39b1f0/Palinfrome%20Test!">view raw</a><a href="https://gist.github.com/anonymous/9587781#file-palinfrome-test">Palinfrome Test!</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a></div>
+</div>
+</div>
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-stringlists-py-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC1"><span class="pl-k">def</span> <span class="pl-en">reverse</span>(<span class="pl-s1">word</span>):</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-stringlists-py-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC2"><span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-s">''</span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-stringlists-py-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC3"><span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">len</span>(<span class="pl-s1">word</span>)):</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-stringlists-py-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC4"><span class="pl-s1">x</span> <span class="pl-c1">+=</span> <span class="pl-s1">word</span>[<span class="pl-en">len</span>(<span class="pl-s1">word</span>)<span class="pl-c1">-</span><span class="pl-c1">1</span><span class="pl-c1">-</span><span class="pl-s1">i</span>]</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-stringlists-py-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC5"><span class="pl-k">return</span> <span class="pl-s1">x</span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-stringlists-py-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-stringlists-py-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC7"><span class="pl-s1">word</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">'give me a word:<span class="pl-cce">\n</span>'</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-stringlists-py-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC8"><span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-en">reverse</span>(<span class="pl-s1">word</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-stringlists-py-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC9"><span class="pl-k">if</span> <span class="pl-s1">x</span> <span class="pl-c1">==</span> <span class="pl-s1">word</span>:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-stringlists-py-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC10"><span class="pl-en">print</span>(<span class="pl-s">'This is a Palindrome'</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-stringlists-py-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC11"><span class="pl-k">else</span>:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-stringlists-py-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC12"><span class="pl-en">print</span>(<span class="pl-s">'This is NOT a Palindrome'</span>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>字串列表解決方案</strong></p>
+<div><strong>練習6</strong><i></i></div>
+<p><span><span>向用戶詢問一個字符串，然後打印出該字符串是否是回文。</span><span>（</span></span><strong><span><span>回文</span></span></strong><span><span>是指向前和向後讀取相同字符串的字符串。）</span></span></p>
+<p><strong>樣品</strong></p>
+<div class="gist" id="gist9587781">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-palinfrome-test">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-palinfrome-test-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC1"><span><span>wrd = input（“請輸入一個單詞”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-palinfrome-test-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC2"><span><span>wrd = str（wrd）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-palinfrome-test-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC3"><span><span>rvs = wrd [::-1]</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-palinfrome-test-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC4"><span><span>打印（rvs）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-palinfrome-test-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC5"><span><span>如果wrd == rvs：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-palinfrome-test-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC6"><span><span> 打印（“這個詞是回文”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-palinfrome-test-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC7"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-palinfrome-test-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC8"><span><span> 打印（“此詞不是回文”）</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/9587781/raw/f83c89024001d949aabd78ee50681ff75d39b1f0/Palinfrome%20Test!"><span><span>查看原始</span></span></a><a href="https://gist.github.com/anonymous/9587781#file-palinfrome-test"><span><span>Palinfrome測試！</span></span></a><span><span><span> </span>由</span><a href="https://github.com/"><span>GitHub</span></a><span>託管於❤</span></span></div>
+</div>
+</div>
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-stringlists-py-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC1"><span class="pl-k"><span><span>def</span></span></span> <span class="pl-en"><span><span>反向</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>單詞</span></span></span><span><span>）：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-stringlists-py-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC2"><span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>= </span></span></span> <span class="pl-s"><span><span>''</span></span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-stringlists-py-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC3"><span class="pl-k"><span><span>對於</span></span></span> <span class="pl-s1"><span><span>我</span></span></span> <span class="pl-c1"><span><span>在</span></span></span> <span class="pl-en"><span><span>範圍</span></span></span><span><span>（</span></span><span class="pl-en"><span><span>len個</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>字</span></span></span><span><span>））：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-stringlists-py-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC4"><span class="pl-s1"><span><span>X </span></span></span> <span class="pl-c1"><span><span>+ =</span></span></span> <span class="pl-s1"><span><span>字</span></span></span><span><span>[ </span></span><span class="pl-en"><span><span>len個</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>字</span></span></span><span><span>）</span></span><span class="pl-c1"><span><span>- </span></span></span><span class="pl-c1"><span><span>1 </span></span></span><span class="pl-c1"><span><span>-</span></span></span><span class="pl-s1"><span><span>我</span></span></span><span><span>]</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-stringlists-py-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC5"><span class="pl-k"><span><span>返回</span></span></span> <span class="pl-s1"><span><span>x</span></span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-stringlists-py-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-stringlists-py-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC7"><span class="pl-s1"><span><span>單詞</span></span></span> <span class="pl-c1"><span><span>=</span></span></span> <span class="pl-en"><span><span>輸入</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“給我一個單詞：</span></span><span class="pl-cce"><span><span>\ n</span></span></span><span><span> ”</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-stringlists-py-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC8"><span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>=</span></span></span> <span class="pl-en"><span><span>反向</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>單詞</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-stringlists-py-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC9"><span class="pl-k"><span><span>如果</span></span></span> <span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>== </span></span></span> <span class="pl-s1"><span><span>word</span></span></span><span><span>：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-stringlists-py-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC10"><span class="pl-en"><span><span>打印</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“這是回文”</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-stringlists-py-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC11"><span class="pl-k"><span><span>其他</span></span></span><span><span>：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-stringlists-py-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC12"><span class="pl-en"><span><span>打印</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“這不是回文”</span></span></span><span><span>）</span></span></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta">
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <h1>組員名單</h1>
 <p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; f177d903d2b01a4a7c5845d7f06bf87af5e92638</p>
 <p>Repository:<span> </span><a href="https://github.com/40923105/cp2020">40923105</a><span> </span>| Site:<span> </span><a href="https://40923105.github.io/cp2020">40923105</a><br/>Repository:<span> </span><a href="https://github.com/40923109/cp2020">40923109</a><span> </span>| Site:<span> </span><a href="https://40923109.github.io/cp2020">40923109</a><br/>Repository:<span> </span><a href="https://github.com/40923110/cp2020">40923110</a><span> </span>| Site:<span> </span><a href="https://40923110.github.io/cp2020">40923110</a><br/>Repository:<span> </span><a href="https://github.com/40923111/cp2020">40923111</a><span> </span>| Site:<span> </span><a href="https://40923111.github.io/cp2020">40923111</a><br/>Repository:<span> </span><a href="https://github.com/40923122/cp2020">40923122</a><span> </span>| Site:<span> </span><a href="https://40923122.github.io/cp2020">40923122</a><br/>Repository:<span> </span><a href="https://github.com/40923130/cp2020">40923130</a><span> </span>| Site:<span> </span><a href="https://40923130.github.io/cp2020">40923130</a><br/>Repository:<span> </span><a href="https://github.com/40923134/cp2020">40923134</a><span> </span>| Site:<span> </span><a href="https://40923134.github.io/cp2020">40923134</a><br/>Repository:<span> </span><a href="https://github.com/40923135/cp2020">40923135</a><span> </span>| Site:<span> </span><a href="https://40923135.github.io/cp2020">40923135</a><span> </span>(組長)<br/>Repository:<span> </span><a href="https://github.com/40923139/cp2020">40923139</a><span> </span>| Site:<span> </span><a href="https://40923139.github.io/cp2020">40923139</a><br/>Repository:<span> </span><a href="https://github.com/40923143/cp2020">40923143</a><span> </span>| Site:<span> </span><a href="https://40923143.github.io/cp2020">40923143</a><br/>Repository:<span> </span><a href="https://github.com/40923153/cp2020">40923153</a><span> </span>| Site:<span> </span><a href="https://40923153.github.io/cp2020">40923153</a></p>

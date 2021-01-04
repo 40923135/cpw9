@@ -1,0 +1,443 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cp2020 ag5</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cp2020 ag5</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cp2020 ag5</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='功課繳交.html'>功課繳交</a><ul class='dropdown'><li><a href='H1.html'>H1</a><li><a href='H3.html'>H3</a><li class='has-children'><a href='H3 (ALL EXERCISES).html'>H3 (ALL EXERCISES)</a><ul class='dropdown'><li><a href='p1.html'>p1</a><li><a href='p2.html'>p2</a><li><a href='P3-1.html'>P3-1</a></li></ul><li class='has-children'><a href='.html'></a><ul class='dropdown'><li><a href='P4-1.html'>P4-1</a><li><a href='P5-1.html'>P5-1</a><li><a href='P6-1.html'>P6-1</a></li></ul><li class='has-children'><a href='H3(All Solutions).html'>H3(All Solutions)</a><ul class='dropdown'><li><a href='P1.html'>P1</a><li><a href='P2.html'>P2</a><li><a href='P3-2.html'>P3-2</a><li><a href='P4-2.html'>P4-2</a><li><a href='P5-2.html'>P5-2</a><li><a href='P6-2.html'>P6-2</a></li></li></ul></ul><li><a href='組員名單.html'>組員名單</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">P5-2 << <a href='P5-2.html'>Previous</a> <a href='組員名單.html'>Next</a> >> 組員名單<br /><h1>P6-2</h1>
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<p><strong>STRING LIST SOLUTIONS</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><strong></strong>
+<div><strong>EXCERCISE5</strong><i></i></div>
+<p>Ask the user for a string and print out whether this string is a palindrome or not. (A<span> </span><strong>palindrome</strong><span> </span>is a string that reads the same forwards and backwards.)</p>
+<p><strong>SAMPLE SOLUTIONS</strong></p>
+<div class="gist" id="gist9587781">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-palinfrome-test">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-palinfrome-test-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC1">wrd=input("Please enter a word")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-palinfrome-test-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC2">wrd=str(wrd)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-palinfrome-test-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC3">rvs=wrd[::-1]</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-palinfrome-test-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC4">print(rvs)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-palinfrome-test-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC5">if wrd == rvs:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-palinfrome-test-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC6">print("This word is a palindrome")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-palinfrome-test-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC7">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-palinfrome-test-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC8">print("This word is not a palindrome")</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/9587781/raw/f83c89024001d949aabd78ee50681ff75d39b1f0/Palinfrome%20Test!">view raw</a><a href="https://gist.github.com/anonymous/9587781#file-palinfrome-test">Palinfrome Test!</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a></div>
+</div>
+</div>
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-stringlists-py-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC1"><span class="pl-k">def</span> <span class="pl-en">reverse</span>(<span class="pl-s1">word</span>):</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-stringlists-py-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC2"><span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-s">''</span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-stringlists-py-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC3"><span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">len</span>(<span class="pl-s1">word</span>)):</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-stringlists-py-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC4"><span class="pl-s1">x</span> <span class="pl-c1">+=</span> <span class="pl-s1">word</span>[<span class="pl-en">len</span>(<span class="pl-s1">word</span>)<span class="pl-c1">-</span><span class="pl-c1">1</span><span class="pl-c1">-</span><span class="pl-s1">i</span>]</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-stringlists-py-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC5"><span class="pl-k">return</span> <span class="pl-s1">x</span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-stringlists-py-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-stringlists-py-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC7"><span class="pl-s1">word</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">'give me a word:<span class="pl-cce">\n</span>'</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-stringlists-py-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC8"><span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-en">reverse</span>(<span class="pl-s1">word</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-stringlists-py-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC9"><span class="pl-k">if</span> <span class="pl-s1">x</span> <span class="pl-c1">==</span> <span class="pl-s1">word</span>:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-stringlists-py-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC10"><span class="pl-en">print</span>(<span class="pl-s">'This is a Palindrome'</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-stringlists-py-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC11"><span class="pl-k">else</span>:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-stringlists-py-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC12"><span class="pl-en">print</span>(<span class="pl-s">'This is NOT a Palindrome'</span>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>字串列表解決方案</strong></p>
+<div><strong>練習6</strong><i></i></div>
+<p><span><span>向用戶詢問一個字符串，然後打印出該字符串是否是回文。</span><span>（</span></span><strong><span><span>回文</span></span></strong><span><span>是指向前和向後讀取相同字符串的字符串。）</span></span></p>
+<p><strong>樣品</strong></p>
+<div class="gist" id="gist9587781">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-palinfrome-test">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-palinfrome-test-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC1"><span><span>wrd = input（“請輸入一個單詞”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-palinfrome-test-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC2"><span><span>wrd = str（wrd）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-palinfrome-test-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC3"><span><span>rvs = wrd [::-1]</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-palinfrome-test-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC4"><span><span>打印（rvs）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-palinfrome-test-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC5"><span><span>如果wrd == rvs：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-palinfrome-test-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC6"><span><span> 打印（“這個詞是回文”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-palinfrome-test-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC7"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-palinfrome-test-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC8"><span><span> 打印（“此詞不是回文”）</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/9587781/raw/f83c89024001d949aabd78ee50681ff75d39b1f0/Palinfrome%20Test!"><span><span>查看原始</span></span></a><a href="https://gist.github.com/anonymous/9587781#file-palinfrome-test"><span><span>Palinfrome測試！</span></span></a><span><span><span> </span>由</span><a href="https://github.com/"><span>GitHub</span></a><span>託管於❤</span></span></div>
+</div>
+</div>
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-stringlists-py-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC1"><span class="pl-k"><span><span>def</span></span></span> <span class="pl-en"><span><span>反向</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>單詞</span></span></span><span><span>）：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-stringlists-py-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC2"><span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>= </span></span></span> <span class="pl-s"><span><span>''</span></span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-stringlists-py-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC3"><span class="pl-k"><span><span>對於</span></span></span> <span class="pl-s1"><span><span>我</span></span></span> <span class="pl-c1"><span><span>在</span></span></span> <span class="pl-en"><span><span>範圍</span></span></span><span><span>（</span></span><span class="pl-en"><span><span>len個</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>字</span></span></span><span><span>））：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-stringlists-py-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC4"><span class="pl-s1"><span><span>X </span></span></span> <span class="pl-c1"><span><span>+ =</span></span></span> <span class="pl-s1"><span><span>字</span></span></span><span><span>[ </span></span><span class="pl-en"><span><span>len個</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>字</span></span></span><span><span>）</span></span><span class="pl-c1"><span><span>- </span></span></span><span class="pl-c1"><span><span>1 </span></span></span><span class="pl-c1"><span><span>-</span></span></span><span class="pl-s1"><span><span>我</span></span></span><span><span>]</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-stringlists-py-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC5"><span class="pl-k"><span><span>返回</span></span></span> <span class="pl-s1"><span><span>x</span></span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-stringlists-py-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-stringlists-py-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC7"><span class="pl-s1"><span><span>單詞</span></span></span> <span class="pl-c1"><span><span>=</span></span></span> <span class="pl-en"><span><span>輸入</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“給我一個單詞：</span></span><span class="pl-cce"><span><span>\ n</span></span></span><span><span> ”</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-stringlists-py-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC8"><span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>=</span></span></span> <span class="pl-en"><span><span>反向</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>單詞</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-stringlists-py-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC9"><span class="pl-k"><span><span>如果</span></span></span> <span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>== </span></span></span> <span class="pl-s1"><span><span>word</span></span></span><span><span>：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-stringlists-py-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC10"><span class="pl-en"><span><span>打印</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“這是回文”</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-stringlists-py-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC11"><span class="pl-k"><span><span>其他</span></span></span><span><span>：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-stringlists-py-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC12"><span class="pl-en"><span><span>打印</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“這不是回文”</span></span></span><span><span>）</span></span></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta">
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />P5-2 << <a href='P5-2.html'>Previous</a> <a href='組員名單.html'>Next</a> >> 組員名單</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

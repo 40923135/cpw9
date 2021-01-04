@@ -2,8 +2,9 @@
 <h2>H1</h2>
 <p>40923135 12/11</p>
 <p>40923110 12/18</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<h2>H3 (AISE)LL EXERC</h2>
+<h2>H3</h2>
+<p>40923135 01/04</p>
+<h2>H3 (ALL EXERCISES)</h2>
 <h3>p1</h3>
 <p>chapter input</p>
 <div><i>input strings types int</i></div>
@@ -505,16 +506,12 @@
   False</code></pre>
 </figure>
 <p><span><span>您當然可以在循環，條件和任何其他編程構造中使用它。</span></span></p>
-<pre><code class="language-python" data-lang="python">  <span class="n">list_of_students</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Michele"</span><span class="p">,</span> <span class="s">"Sara"</span><span class="p">,</span> <span class="s">"Cassie"</span><span class="p">]</span><span></span>
-<span></span>
+<pre><code class="language-python" data-lang="python">  <span class="n">list_of_students</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Michele"</span><span class="p">,</span> <span class="s">"Sara"</span><span class="p">,</span> <span class="s">"Cassie"</span><span class="p">]</span>
+
   <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Type name to check: "</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">list_of_students</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"This student is enrolled."</span><span class="p">)<br/><br/></span></code></pre>
-<figure class="highlight">
-<h4></h4>
-<h4></h4>
-</figure>
-</figure>
+    <span class="k">print</span><span class="p">(</span><span class="s">"This student is enrolled."</span><span class="p">)</span></code></pre>
+<code class="language-python" data-lang="python"><span class="p"><br/></span></code></figure>
 <h3>P6</h3>
 <p>字串清單</p>
 <div><i><span><span>字符串列表索引</span></span></i></div>
@@ -651,7 +648,724 @@
 <p>Moral of the story: a string is a list.</p>
 <p></p>
 <h2>H3(All Solutions)</h2>
+<h3>P1</h3>
+<p>CHARACTER IN PUT SOLUTION</p>
+<div><i></i></div>
+<p>Because I cannot include every single submission I get, I will choose one or two that are example answers and include those within each post.</p>
+<p><strong>EXERCISE 1</strong></p>
+<p>Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will turn 100 years old.</p>
+<p><strong>輸入解決方案</strong></p>
+<p><span><span>由於我無法將收到的每份意見書都包括在內，因此我將選擇一個或兩個作為示例答案，並在每個帖子中包括這些答案。</span></span></p>
+<p><strong>練習1</strong></p>
+<p><span><span>創建一個程序，要求用戶輸入他們的姓名和年齡。</span><span>打印給他們的消息，告訴他們他們將滿100歲的年份。</span></span></p>
+<h3>P2</h3>
+<p><strong>ODD OR EVEN SOLUTIONS</strong></p>
+<p><strong>EXERCISES 2</strong></p>
+<p>Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.</p>
+<p><em>Hint: how does an even / odd number react differently when divided by 2?</em></p>
+<p>Extras:</p>
+<ol>
+<li>If the number is a multiple of 4, print out a different message.</li>
+<li>Ask the user for two numbers: one number to check (call it<span> </span><code class="highlighter-rouge">num</code>) and one number to divide by (<code class="highlighter-rouge">check</code>). If<span> </span><code class="highlighter-rouge">check</code><span> </span>divides evenly into<span> </span><code class="highlighter-rouge">num</code>, tell that to the user. If not, print a different appropriate message.</li>
+</ol>
+<p>SAMPLE SOLUTION</p>
+<p>There are many ways of doing the exercise, so I am posting a few sample solutions. The very basics:</p>
+<div class="gist" id="gist8838738">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-02">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-02-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC1">num = input("Enter a number: ")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-02-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC2">mod = num % 2</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-02-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC3">if mod &gt; 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-02-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC4">print("You picked an odd number.")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-02-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC5">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-02-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC6">print("You picked an even number.")</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/8838738/raw/93c6445ce316897938f6ed990602951ac8368bae/02">view raw</a><a href="https://gist.github.com/anonymous/8838738#file-02">02</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a></div>
+</div>
+</div>
+<p>And something that looks slightly more complex (but is just a more complicated conditional):</p>
+<div class="gist" id="gist8911985">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-gistfile1-txt">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-gistfile1-txt-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC1">num = int(input("give me a number to check: "))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-gistfile1-txt-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC2">check = int(input("give me a number to divide by: "))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-gistfile1-txt-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC3"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-gistfile1-txt-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC4">if num % 4 == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-gistfile1-txt-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC5">print(num, "is a multiple of 4")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-gistfile1-txt-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC6">elif num % 2 == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-gistfile1-txt-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC7">print(num, "is an even number")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-gistfile1-txt-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC8">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-gistfile1-txt-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC9">print(num, "is an odd number")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-gistfile1-txt-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC10"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-gistfile1-txt-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC11">if num % check == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-gistfile1-txt-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC12">print(num, "divides evenly by", check)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-gistfile1-txt-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC13">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="14" id="file-gistfile1-txt-L14"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC14">print(num, "does not divide evenly by", check)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>基數或偶數解</strong></p>
+<p><strong>練習2</strong></p>
+<p><span><span>詢問用戶一個數字。</span><span>根據數字是偶數還是奇數，向用戶打印一條適當的消息。</span></span></p>
+<p><em><span><span>提示：偶數/奇數除以2時的反應如何？</span></span></em></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>如果數字是4的倍數，請打印出另一條消息。</span></span></li>
+<li><span><span>向用戶詢問兩個數字：一個數字要檢查（稱為</span></span><code class="highlighter-rouge">num</code><span><span>），另一個數字要除以（</span></span><code class="highlighter-rouge">check</code><span><span>）。</span><span>如果</span></span><code class="highlighter-rouge">check</code><span><span>平均分為</span></span><code class="highlighter-rouge">num</code><span><span>，請告知用戶。</span><span>如果不是，請打印其他適當的消息。</span></span><span><span></span></span></li>
+</ol>
+<p><strong>樣品</strong></p>
+<p><span><span>進行練習的方法有很多，因此我將發布一些示例解決方案。</span><span>基本知識：</span></span></p>
+<div class="gist" id="gist8838738">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-02">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-02-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC1"><span><span>num = input（“輸入數字：”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-02-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC2"><span><span>mod = num％2</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-02-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC3"><span><span>如果mod&gt; 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-02-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC4"><span><span> 打印（“您選擇了一個奇數。”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-02-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC5"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-02-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-02-LC6"><span><span> 打印（“您選擇了一個偶數。”）</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/8838738/raw/93c6445ce316897938f6ed990602951ac8368bae/02"><span><span>查看原始</span></span></a><a href="https://gist.github.com/anonymous/8838738#file-02"><span><span>02</span></span></a><span><span><span> </span>通過託管與❤<span> </span></span></span><a href="https://github.com/"><span><span>GitHub上</span></span></a></div>
+</div>
+</div>
+<p><span><span>看起來稍微複雜一些（但只是條件更複雜）：</span></span></p>
+<div class="gist" id="gist8911985">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-gistfile1-txt">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-gistfile1-txt-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC1"><span><span>num = int（input（“給我一個要檢查的數字：”））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-gistfile1-txt-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC2"><span><span>check = int（input（“給我一個數字除以：”））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-gistfile1-txt-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC3"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-gistfile1-txt-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC4"><span><span>如果num％4 == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-gistfile1-txt-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC5"><span><span> print（num，“是4的倍數”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-gistfile1-txt-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC6"><span><span>elif num％2 == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-gistfile1-txt-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC7"><span><span> 打印（數字，“是偶數”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-gistfile1-txt-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC8"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-gistfile1-txt-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC9"><span><span> print（num，“是一個奇數”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-gistfile1-txt-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC10"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-gistfile1-txt-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC11"><span><span>如果num％check == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-gistfile1-txt-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC12"><span><span> 打印（數字，“均分”，選中）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-gistfile1-txt-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC13"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="14" id="file-gistfile1-txt-L14"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-txt-LC14"><span><span> 打印（數字，“不均勻地除以”，檢查）</span></span></td>
+</tr>
+</tbody>
+</table>
+<h3 class="pagetitle">P3</h3>
+<p><strong>LIST LESS THAN SOLUTIONS TEN</strong></p>
+<p><strong>EXERCISE</strong></p>
+<p>Take a list, say for example this one:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span></code></pre>
+</figure>
+<p>and write a program that prints out all the elements of the list that are less than 5.</p>
+<p>Extras:</p>
+<ol>
+<li>Instead of printing the elements one by one, make a new list that has all the elements less than 5 from this list in it and print out this new list.</li>
+<li>Write this in one line of Python.</li>
+<li>Ask the user for a number and return a list that contains only elements from the original list<span> </span><code class="highlighter-rouge">a</code><span> </span>that are smaller than that number given by the user.</li>
+</ol>
+<p><strong>SAMPALE SOLUTION</strong></p>
+<p>I will note that none of the solutions that were submitted were written in one line of Python. There will be more exercises later that show you how to do this!</p>
+<p>Here is a sample solution that solves the exercise, including extras 1 and 3.</p>
+<p><strong>列出少於10個解決方案</strong></p>
+<p><strong>練習3</strong></p>
+<p><span><span>拿一個清單，例如說一個：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>並編寫一個程序，打印出列表中小於5的所有元素。</span></span></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>而不是一個一個地打印元素，而是創建一個新列表，其中該列表中的所有元素少於5個，然後打印出該新列表。</span></span></li>
+<li><span><span>用一行Python編寫。</span></span></li>
+<li><span><span>向用戶詢問一個數字，然後返回一個列表，該列表僅包含原始列表</span></span><code class="highlighter-rouge">a</code><span><span>中小於用戶給定數字的</span><span>元素</span><span>。</span></span></li>
+</ol>
+<p><strong>樣品</strong></p>
+<p><span><span>溶液</span></span><span><span>我將注意到，提交的解決方案都不是用Python的一行編寫的。</span><span>稍後會有更多練習向您展示如何執行此操作！</span></span></p>
+<p><span><span>這是解決該練習的示例解決方案，包括附加功能1和3。</span></span></p>
+<h3>P4</h3>
+<p><strong>EXERCISE 4</strong></p>
+<p><strong>SAMPALE SOLUTION</strong></p>
+<p>Create a program that asks the user for a number and then prints out a list of all the divisors of that number. (If you don’t know what a<span> </span><em>divisor</em><span> </span>is, it is a number that divides evenly into another number. For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)</p>
 <p></p>
+<div class="gist" id="gist9269773">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-practice-python-excersise-4-divisors">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-practice-python-excersise-4-divisors-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC1">__author__ = 'jeffreyhunt'</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-practice-python-excersise-4-divisors-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC2"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-practice-python-excersise-4-divisors-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC3">num = int(input("Please choose a number to divide: "))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-practice-python-excersise-4-divisors-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC4"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-practice-python-excersise-4-divisors-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC5">listRange = list(range(1,num+1))</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-practice-python-excersise-4-divisors-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-practice-python-excersise-4-divisors-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC7">divisorList = []</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-practice-python-excersise-4-divisors-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC8"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-practice-python-excersise-4-divisors-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC9">for number in listRange:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-practice-python-excersise-4-divisors-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC10">if num % number == 0:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-practice-python-excersise-4-divisors-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC11">divisorList.append(number)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-practice-python-excersise-4-divisors-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC12"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-practice-python-excersise-4-divisors-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC13">print(divisorList)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/jeffhunt/9269773/raw/29cd4515ddb89cd5b1440597625cf41e3d3ee957/Practice%20Python%20-%20Excersise%204:%20Divisors">view raw</a><a href="https://gist.github.com/jeffhunt/9269773#file-practice-python-excersise-4-divisors">Practice Python - Excersise 4: Divisors</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a></div>
+</div>
+</div>
+<p>There were a number of tricky things with this exercise. First, the type conversions between input strings and integers for the<span> </span><code class="highlighter-rouge">range()</code><span> </span>function need to be carefully output. Second, the arguments to<span> </span><code class="highlighter-rouge">range()</code><span> </span>had to be carefully constructed to cover all the possible numbers. Third, the condition in the<span> </span><code class="highlighter-rouge">if</code><span> </span>statement had to be correct as well.</p>
+<p><strong>除數解決方案</strong></p>
+<p><strong>練習4</strong></p>
+<span></span>
+<p><span><span>數解決方案</span></span><span><span>創建一個程序，詢問用戶一個數字，然後打印出該數字的所有除數的列表。</span><span>（如果您不知道</span></span><em><span><span>除數</span></span></em><span><span>是多少，它是一個平均除以另一個數的數字。例如，13是26的除數，因為26/13沒有餘數。）</span></span></p>
+<p><strong>樣品</strong></p>
+<div class="gist" id="gist9269773">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-practice-python-excersise-4-divisors">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-practice-python-excersise-4-divisors-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC1"><span><span>__author__ ='jeffreyhunt'</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-practice-python-excersise-4-divisors-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC2"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-practice-python-excersise-4-divisors-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC3"><span><span>num = int（input（“請選擇一個要除的數字：”））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-practice-python-excersise-4-divisors-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC4"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-practice-python-excersise-4-divisors-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC5"><span><span>listRange = list（範圍（1，num + 1））</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-practice-python-excersise-4-divisors-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-practice-python-excersise-4-divisors-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC7"><span><span>divisorList = []</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-practice-python-excersise-4-divisors-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC8"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-practice-python-excersise-4-divisors-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC9"><span><span>用於listRange中的數字：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-practice-python-excersise-4-divisors-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC10"><span><span> 如果num％number == 0：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-practice-python-excersise-4-divisors-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC11"><span><span> divisorList.append（number）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-practice-python-excersise-4-divisors-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC12"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="13" id="file-practice-python-excersise-4-divisors-L13"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice-python-excersise-4-divisors-LC13"><span><span>打印（divisorList）</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/jeffhunt/9269773/raw/29cd4515ddb89cd5b1440597625cf41e3d3ee957/Practice%20Python%20-%20Excersise%204:%20Divisors"><span><span>查看原始</span></span></a><a href="https://gist.github.com/jeffhunt/9269773#file-practice-python-excersise-4-divisors"><span><span>實踐Python的- Excersise 4：除數</span></span></a><span><span><span> </span>託管與❤通過</span></span><a href="https://github.com/"><span><span>GitHub上</span></span></a></div>
+</div>
+</div>
+<p><span><span>這項練習有很多棘手的事情。</span><span>首先，</span></span><code class="highlighter-rouge">range()</code><span><span>需要仔細輸出函數的</span><span>輸入字符串和整數之間的類型轉換</span><span>。</span><span>其次，</span></span><code class="highlighter-rouge">range()</code><span><span>必須仔細構造</span><span>論據以</span><span>涵蓋所有可能的數字。</span><span>第三，</span></span><code class="highlighter-rouge">if</code><span><span>聲明中</span><span>的條件</span><span>也必須正確。</span></span></p>
+<h3><span><span>P5</span></span></h3>
+<p><span><span>LIST OVERLAP SOLUTIONS</span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>EXERCISE 5<i></i></div>
+<p>Take two lists, say for example these two:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
+</figure>
+<p>and write a program that returns a list that contains only the elements that are common between the lists (without duplicates). Make sure your program works on two lists of different sizes.</p>
+<p><strong>列表重疊解決方案</strong></p>
+<div><strong>練習5</strong><i></i></div>
+<p><span><span>拿兩個列表，舉例來說，這兩個：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>並編寫一個程序，該程序返回一個列表，該列表僅包含列表之間的公共元素（無重複項）。</span><span>確保您的程序可以在兩個不同大小的列表上運行。</span></span></p>
+<h3><span><span>P6</span></span></h3>
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<p><strong>STRING LIST SOLUTIONS</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><strong></strong>
+<div><strong>EXCERCISE5</strong><i></i></div>
+<p>Ask the user for a string and print out whether this string is a palindrome or not. (A<span> </span><strong>palindrome</strong><span> </span>is a string that reads the same forwards and backwards.)</p>
+<p><strong>SAMPLE SOLUTIONS</strong></p>
+<div class="gist" id="gist9587781">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-palinfrome-test">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-palinfrome-test-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC1">wrd=input("Please enter a word")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-palinfrome-test-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC2">wrd=str(wrd)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-palinfrome-test-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC3">rvs=wrd[::-1]</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-palinfrome-test-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC4">print(rvs)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-palinfrome-test-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC5">if wrd == rvs:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-palinfrome-test-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC6">print("This word is a palindrome")</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-palinfrome-test-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC7">else:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-palinfrome-test-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC8">print("This word is not a palindrome")</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/9587781/raw/f83c89024001d949aabd78ee50681ff75d39b1f0/Palinfrome%20Test!">view raw</a><a href="https://gist.github.com/anonymous/9587781#file-palinfrome-test">Palinfrome Test!</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a></div>
+</div>
+</div>
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-stringlists-py-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC1"><span class="pl-k">def</span> <span class="pl-en">reverse</span>(<span class="pl-s1">word</span>):</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-stringlists-py-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC2"><span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-s">''</span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-stringlists-py-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC3"><span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">len</span>(<span class="pl-s1">word</span>)):</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-stringlists-py-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC4"><span class="pl-s1">x</span> <span class="pl-c1">+=</span> <span class="pl-s1">word</span>[<span class="pl-en">len</span>(<span class="pl-s1">word</span>)<span class="pl-c1">-</span><span class="pl-c1">1</span><span class="pl-c1">-</span><span class="pl-s1">i</span>]</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-stringlists-py-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC5"><span class="pl-k">return</span> <span class="pl-s1">x</span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-stringlists-py-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-stringlists-py-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC7"><span class="pl-s1">word</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">'give me a word:<span class="pl-cce">\n</span>'</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-stringlists-py-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC8"><span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-en">reverse</span>(<span class="pl-s1">word</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-stringlists-py-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC9"><span class="pl-k">if</span> <span class="pl-s1">x</span> <span class="pl-c1">==</span> <span class="pl-s1">word</span>:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-stringlists-py-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC10"><span class="pl-en">print</span>(<span class="pl-s">'This is a Palindrome'</span>)</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-stringlists-py-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC11"><span class="pl-k">else</span>:</td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-stringlists-py-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC12"><span class="pl-en">print</span>(<span class="pl-s">'This is NOT a Palindrome'</span>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>字串列表解決方案</strong></p>
+<div><strong>練習6</strong><i></i></div>
+<p><span><span>向用戶詢問一個字符串，然後打印出該字符串是否是回文。</span><span>（</span></span><strong><span><span>回文</span></span></strong><span><span>是指向前和向後讀取相同字符串的字符串。）</span></span></p>
+<p><strong>樣品</strong></p>
+<div class="gist" id="gist9587781">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-palinfrome-test">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-palinfrome-test-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC1"><span><span>wrd = input（“請輸入一個單詞”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-palinfrome-test-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC2"><span><span>wrd = str（wrd）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-palinfrome-test-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC3"><span><span>rvs = wrd [::-1]</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-palinfrome-test-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC4"><span><span>打印（rvs）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-palinfrome-test-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC5"><span><span>如果wrd == rvs：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-palinfrome-test-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC6"><span><span> 打印（“這個詞是回文”）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-palinfrome-test-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC7"><span><span>其他：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-palinfrome-test-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-palinfrome-test-LC8"><span><span> 打印（“此詞不是回文”）</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"><a href="https://gist.github.com/anonymous/9587781/raw/f83c89024001d949aabd78ee50681ff75d39b1f0/Palinfrome%20Test!"><span><span>查看原始</span></span></a><a href="https://gist.github.com/anonymous/9587781#file-palinfrome-test"><span><span>Palinfrome測試！</span></span></a><span><span><span> </span>由</span><a href="https://github.com/"><span>GitHub</span></a><span>託管於❤</span></span></div>
+</div>
+</div>
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-num js-line-number" data-line-number="1" id="file-stringlists-py-L1"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC1"><span class="pl-k"><span><span>def</span></span></span> <span class="pl-en"><span><span>反向</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>單詞</span></span></span><span><span>）：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="2" id="file-stringlists-py-L2"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC2"><span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>= </span></span></span> <span class="pl-s"><span><span>''</span></span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="3" id="file-stringlists-py-L3"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC3"><span class="pl-k"><span><span>對於</span></span></span> <span class="pl-s1"><span><span>我</span></span></span> <span class="pl-c1"><span><span>在</span></span></span> <span class="pl-en"><span><span>範圍</span></span></span><span><span>（</span></span><span class="pl-en"><span><span>len個</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>字</span></span></span><span><span>））：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="4" id="file-stringlists-py-L4"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC4"><span class="pl-s1"><span><span>X </span></span></span> <span class="pl-c1"><span><span>+ =</span></span></span> <span class="pl-s1"><span><span>字</span></span></span><span><span>[ </span></span><span class="pl-en"><span><span>len個</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>字</span></span></span><span><span>）</span></span><span class="pl-c1"><span><span>- </span></span></span><span class="pl-c1"><span><span>1 </span></span></span><span class="pl-c1"><span><span>-</span></span></span><span class="pl-s1"><span><span>我</span></span></span><span><span>]</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="5" id="file-stringlists-py-L5"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC5"><span class="pl-k"><span><span>返回</span></span></span> <span class="pl-s1"><span><span>x</span></span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="6" id="file-stringlists-py-L6"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC6"></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="7" id="file-stringlists-py-L7"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC7"><span class="pl-s1"><span><span>單詞</span></span></span> <span class="pl-c1"><span><span>=</span></span></span> <span class="pl-en"><span><span>輸入</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“給我一個單詞：</span></span><span class="pl-cce"><span><span>\ n</span></span></span><span><span> ”</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="8" id="file-stringlists-py-L8"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC8"><span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>=</span></span></span> <span class="pl-en"><span><span>反向</span></span></span><span><span>（</span></span><span class="pl-s1"><span><span>單詞</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="9" id="file-stringlists-py-L9"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC9"><span class="pl-k"><span><span>如果</span></span></span> <span class="pl-s1"><span><span>x </span></span></span> <span class="pl-c1"><span><span>== </span></span></span> <span class="pl-s1"><span><span>word</span></span></span><span><span>：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="10" id="file-stringlists-py-L10"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC10"><span class="pl-en"><span><span>打印</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“這是回文”</span></span></span><span><span>）</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="11" id="file-stringlists-py-L11"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC11"><span class="pl-k"><span><span>其他</span></span></span><span><span>：</span></span></td>
+</tr>
+<tr>
+<td class="blob-num js-line-number" data-line-number="12" id="file-stringlists-py-L12"></td>
+<td class="blob-code blob-code-inner js-file-line" id="file-stringlists-py-LC12"><span class="pl-en"><span><span>打印</span></span></span><span><span>（</span></span><span class="pl-s"><span><span>“這不是回文”</span></span></span><span><span>）</span></span></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta">
+<div class="gist" id="gist17590268">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-stringlists-py"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <h1>組員名單</h1>
 <p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; f177d903d2b01a4a7c5845d7f06bf87af5e92638</p>
 <p>Repository:<span> </span><a href="https://github.com/40923105/cp2020">40923105</a><span> </span>| Site:<span> </span><a href="https://40923105.github.io/cp2020">40923105</a><br/>Repository:<span> </span><a href="https://github.com/40923109/cp2020">40923109</a><span> </span>| Site:<span> </span><a href="https://40923109.github.io/cp2020">40923109</a><br/>Repository:<span> </span><a href="https://github.com/40923110/cp2020">40923110</a><span> </span>| Site:<span> </span><a href="https://40923110.github.io/cp2020">40923110</a><br/>Repository:<span> </span><a href="https://github.com/40923111/cp2020">40923111</a><span> </span>| Site:<span> </span><a href="https://40923111.github.io/cp2020">40923111</a><br/>Repository:<span> </span><a href="https://github.com/40923122/cp2020">40923122</a><span> </span>| Site:<span> </span><a href="https://40923122.github.io/cp2020">40923122</a><br/>Repository:<span> </span><a href="https://github.com/40923130/cp2020">40923130</a><span> </span>| Site:<span> </span><a href="https://40923130.github.io/cp2020">40923130</a><br/>Repository:<span> </span><a href="https://github.com/40923134/cp2020">40923134</a><span> </span>| Site:<span> </span><a href="https://40923134.github.io/cp2020">40923134</a><br/>Repository:<span> </span><a href="https://github.com/40923135/cp2020">40923135</a><span> </span>| Site:<span> </span><a href="https://40923135.github.io/cp2020">40923135</a><span> </span>(組長)<br/>Repository:<span> </span><a href="https://github.com/40923139/cp2020">40923139</a><span> </span>| Site:<span> </span><a href="https://40923139.github.io/cp2020">40923139</a><br/>Repository:<span> </span><a href="https://github.com/40923143/cp2020">40923143</a><span> </span>| Site:<span> </span><a href="https://40923143.github.io/cp2020">40923143</a><br/>Repository:<span> </span><a href="https://github.com/40923153/cp2020">40923153</a><span> </span>| Site:<span> </span><a href="https://40923153.github.io/cp2020">40923153</a></p>
