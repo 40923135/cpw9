@@ -133,8 +133,218 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">H3 << <a href='H3.html'>Previous</a> <a href='p1.html'>Next</a> >> p1<br /><h1>H3 (ALL EXERCISES)</h1>
-<br />H3 << <a href='H3.html'>Previous</a> <a href='p1.html'>Next</a> >> p1</div>
+    <div id="tipue_search_content">p7-2 << <a href='p7-2.html'>Previous</a> <a href='p9-2.html'>Next</a> >> p9-2<br /><h1>p8-2</h1>
+<strong>Rock Paper Scissors Solutions</strong>
+<p><strong><a href="https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html">Exercise 8</a></strong></p>
+<p>Make a two-player Rock-Paper-Scissors game. (<em>Hint: Ask for player plays (using<span> </span><code class="highlighter-rouge">input</code>), compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game</em>)</p>
+<p>Remember the rules:</p>
+<ul>
+<li>Rock beats scissors</li>
+<li>Scissors beats paper</li>
+<li>Paper beats rock</li>
+</ul>
+<p><strong>Sample solution</strong></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-rockpaperscissors-py-LC1">
+<pre>   1    import sys
+   2
+   3    user1 = input("What's your name?")
+   4    user2 = input("And your name?")
+   5    user1_answer = input("%s, do yo want to choose rock, paper or scissors?" % user1)
+   6    user2_answer = input("%s, do you want to choose rock, paper or scissors?" % user2)
+   7    
+   8    def compare(u1, u2):
+   9        if u1 == u2:
+  10        return("It's a tie!")
+  11        elif u1 == 'rock':
+  12            if u2 == 'scissors':
+  13                return("Rock wins!")
+  14            else:
+  15                return("Paper wins!")
+  16        elif u1 == 'scissors':
+  17            if u2 == 'paper':
+  18                return("Scissors win!")
+  19            else:
+  20                return("Rock wins!")
+  21        elif u1 == 'paper':
+  22            if u2 == 'rock':
+  23                return("Paper wins!")
+  24            else:
+  25                return("Scissors win!")
+  26        else:
+  27            return("Invalid input! You have not entered rock, paper or scissors, try again.")
+  28            sys.exit()
+  29
+  30    print(compare(user1_answer, user2_answer)</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-en"> <a href="https://gist.github.com/redice99/21ceca1561519f5a12bc#file-rockpaperscissors-py">rockpaperscissors.py</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>   <span> </span><a href="https://gist.github.com/redice99/21ceca1561519f5a12bc/raw/83a656379141e32ded22ae53d030b74dd02c4b97/rockpaperscissors.py">view raw</a></span></td>
+</tr>
+</tbody>
+</table>
+<p>Another sample solution uses a clever way of checking the winner:</p>
+<div class="gist" id="gist29840996">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-rock-paper-scissors-game">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-rock-paper-scissors-game-LC1">
+<pre>   1    print('''Please pick one:
+   2                rock
+   3                scissors
+   4                paper''')
+   5    
+   6    while True:
+   7        game_dict = {'rock': 1, 'scissors': 2, 'paper': 3}
+   8        player_a = str(input("Player a: "))
+   9        player_b = str(input("Player b: "))
+  10        a = game_dict.get(player_a)
+  11        b = game_dict.get(player_b)
+  12        dif = a - b
+  13    
+  14        if dif in [-1, 2]:
+  15            print('player a wins.')
+  16            if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+  17                continue
+  18            else:
+  19                print('game over.')
+  20                break
+  21        elif dif in [-2, 1]:
+  22            print('player b wins.')
+  23            if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+  24                continue
+  25            else:
+  26                print('game over.')
+  27                break
+  28        else:
+  29            print('Draw.Please continue.')
+  30            print('')</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"> <a href="https://gist.github.com/springtan/6f579c3160bdcac2a0df#file-rock-paper-scissors-game">rock, paper, scissors game</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>   <span> </span><a href="https://gist.github.com/springtan/6f579c3160bdcac2a0df/raw/8c7899c1115d927feb27b82dc835a032f3473b56/rock,%20paper,%20scissors%20game">view raw</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p id="share"><strong>Share the fun!</strong></p>
+<p><strong> 剪刀石頭布解決方案</strong></p>
+<p><strong><a href="https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html">練習8</a></strong></p>
+<p><span><span>製作兩人石頭剪刀布遊戲。</span><span>（</span></span><em><span><span>提示：（使用</span></span><code class="highlighter-rouge">input</code><span><span>）</span><span>詢問玩家玩法</span><span>，進行比較，打印出對獲勝者表示祝賀的消息，並詢問玩家是否要開始新遊戲</span></span></em><span><span>）</span></span></p>
+<p><span><span>記住規則：</span></span></p>
+<ul>
+<li><span><span>搖滾剪刀</span></span></li>
+<li><span><span>剪刀打紙</span></span></li>
+<li><span><span>紙打石頭</span></span></li>
+</ul>
+<p><strong>樣品解決方案</strong></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-rockpaperscissors-py-LC1">
+<pre>   1    import sys
+   2
+   3    user1 = input("What's your name?")
+   4    user2 = input("And your name?")
+   5    user1_answer = input("%s, do yo want to choose rock, paper or scissors?" % user1)
+   6    user2_answer = input("%s, do you want to choose rock, paper or scissors?" % user2)
+   7    
+   8    def compare(u1, u2):
+   9        if u1 == u2:
+  10        return("It's a tie!")
+  11        elif u1 == 'rock':
+  12            if u2 == 'scissors':
+  13                return("Rock wins!")
+  14            else:
+  15                return("Paper wins!")
+  16        elif u1 == 'scissors':
+  17            if u2 == 'paper':
+  18                return("Scissors win!")
+  19            else:
+  20                return("Rock wins!")
+  21        elif u1 == 'paper':
+  22            if u2 == 'rock':
+  23                return("Paper wins!")
+  24            else:
+  25                return("Scissors win!")
+  26        else:
+  27            return("Invalid input! You have not entered rock, paper or scissors, try again.")
+  28            sys.exit()
+  29
+  30    print(compare(user1_answer, user2_answer)</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-en"><a href="https://gist.github.com/redice99/21ceca1561519f5a12bc#file-rockpaperscissors-py">rockpaperscissors.py</a><span> </span>由<span> </span><a href="https://github.com/">GitHub</a> 託管  <span> </span><a href="https://gist.github.com/redice99/21ceca1561519f5a12bc/raw/83a656379141e32ded22ae53d030b74dd02c4b97/rockpaperscissors.py">查看原始</a></span></td>
+</tr>
+</tbody>
+</table>
+<p><span><span>另一個示例解決方案使用一種巧妙的方法來檢查獲勝者：</span></span></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-rock-paper-scissors-game-LC1">
+<pre>   1    print('''Please pick one:
+   2                rock
+   3                scissors
+   4                paper''')
+   5    
+   6    while True:
+   7        game_dict = {'rock': 1, 'scissors': 2, 'paper': 3}
+   8        player_a = str(input("Player a: "))
+   9        player_b = str(input("Player b: "))
+  10        a = game_dict.get(player_a)
+  11        b = game_dict.get(player_b)
+  12        dif = a - b
+  13    
+  14        if dif in [-1, 2]:
+  15            print('player a wins.')
+  16            if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+  17                continue
+  18            else:
+  19                print('game over.')
+  20                break
+  21        elif dif in [-2, 1]:
+  22            print('player b wins.')
+  23            if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+  24                continue
+  25            else:
+  26                print('game over.')
+  27                break
+  28        else:
+  29            print('Draw.Please continue.')
+  30            print('')</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"> <a href="https://gist.github.com/springtan/6f579c3160bdcac2a0df#file-rock-paper-scissors-game">石頭, 布, 剪刀遊戲</a><span> </span>由<span> </span><a href="https://github.com/">GitHub</a> 託管  <span> </span><a href="https://gist.github.com/springtan/6f579c3160bdcac2a0df/raw/8c7899c1115d927feb27b82dc835a032f3473b56/rock,%20paper,%20scissors%20game">查看原始</a></td>
+</tr>
+</tbody>
+</table>
+<div class="gist" id="gist29840996">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-rock-paper-scissors-game">
+<p class="Box-body p-0 blob-wrapper data type-text" itemprop="text"><strong>分享樂趣！</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />p7-2 << <a href='p7-2.html'>Previous</a> <a href='p9-2.html'>Next</a> >> p9-2</div>
         
     <!-- footer -->
       <div class="container">
