@@ -3,8 +3,11 @@
 <p>40923135 12/11</p>
 <p>40923110 12/18</p>
 <p>40923111 01/07</p>
+<p>40923122 01/08</p>
+<p>40923105 01/08</p>
 <h2>H3</h2>
 <p>40923135 01/04</p>
+<p>40923111 01/07</p>
 <h2>H3 (ALL EXERCISES)</h2>
 <h3>p1</h3>
 <p>chapter input</p>
@@ -253,7 +256,7 @@
 </figure>
 <p><span><span>相同的相等/不相等比較適用於字符串。</span></span></p>
 <p><span><span>有關相等性和比較器的鏈接：</span></span></p>
-<h3><span><span>P3</span></span></h3>
+<h3>P3</h3>
 <p><span><span>LISS LES THAN TEN</span></span></p>
 <div><i>list numbers elements if conditional</i></div>
 <div><i></i></div>
@@ -325,7 +328,6 @@
 <p>What happens if<span> </span><code class="highlighter-rouge">grade</code><span> </span>is 50? All the conditions are false, so<span> </span><code class="highlighter-rouge">"F"</code><span> </span>gets printed on the screen. But what if<span> </span><code class="highlighter-rouge">grade</code><span> </span>is 95? Then all the conditions are true and everything gets printed, right? Nope! What happens is the program goes line by line. The first condition (grade &gt;= 90) is satisfied, so the program enters into the code inside the<span> </span><code class="highlighter-rouge">if</code><span> </span>statement, executing<span> </span><code class="highlighter-rouge">print("A")</code>. Once code inside a conditional has been executed, the rest of the conditions are skipped and none of the other conditionals are checked.</p>
 <p><strong>列出少於10</strong></p>
 <div><i><span><span>如果有條件，則列出數字元素</span></span></i></div>
-<h2><span><span> </span></span></h2>
 <p><strong>練習3和解決方法</strong></p>
 <p><strong>例如說一個</strong></p>
 <figure class="highlight">
@@ -392,7 +394,7 @@
   <span class="k">print</span><span class="p">(</span><span class="s">"F"</span><span class="p">)</span></code></pre>
 </figure>
 <p><span><span>如果</span></span><code class="highlighter-rouge">grade</code><span><span>是50，</span><span>會發生什麼</span><span>？</span><span>所有條件均為假，因此</span></span><code class="highlighter-rouge">"F"</code><span><span>將其打印在屏幕上。</span><span>但是，如果</span></span><code class="highlighter-rouge">grade</code><span><span>是95，該怎麼辦？</span><span>然後所有條件都成立，一切都打印出來了，對吧？</span><span>不！</span><span>程序將逐行執行。</span><span>滿足第一個條件（等級&gt; = 90），因此程序將輸入</span></span><code class="highlighter-rouge">if</code><span><span>語句</span><span>內的代碼</span><span>，執行</span></span><code class="highlighter-rouge">print("A")</code><span><span>。</span><span>一旦執行了條件語句中的代碼，將跳過其餘條件，並且不檢查其他條件。</span></span></p>
-<h3><span><span>P4</span></span></h3>
+<h3>P4</h3>
 <p>DIVISORSE</p>
 <div><br/><i></i></div>
 <div>EXECISE FOUR</div>
@@ -648,6 +650,254 @@
 <p>Now<span> </span><code class="highlighter-rouge">s</code><span> </span>has the string “examp” in it.</p>
 <p>Moral of the story: a string is a list.</p>
 <div id="tipue_search_content">
+<h3>p7</h3>
+<p><strong>List Comperhensions </strong></p>
+<p><strong>Exercise 7 (and <a href="https://www.practicepython.org/solution/2014/03/26/07-list-comprehensions-solutions.html">Solution</a>)</strong></p>
+<p>Let’s say I give you a list saved in a variable:<span> </span><code class="highlighter-rouge">a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code>. Write one line of Python that takes this list<span> </span><code class="highlighter-rouge">a</code><span> </span>and makes a new list that has only the even elements of this list in it.</p>
+<p><strong>Discussion</strong></p>
+<p>Concepts for this week:</p>
+<ul>
+<li>List comprehensions</li>
+</ul>
+<p><strong>List comprehensions</strong></p>
+<p>The idea of a<span> </span><em>list comprehension</em><span> </span>is to make code more compact to accomplish tasks involving lists. Take for example this code:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">years_of_birth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1991</span><span class="p">]</span>
+  <span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_of_birth</span><span class="p">:</span> 
+    <span class="n">ages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2014</span> <span class="o">-</span> <span class="n">year</span><span class="p">)</span></code></pre>
+</figure>
+<p>And at the end, the variable<span> </span><code class="highlighter-rouge">ages</code><span> </span>has the list<span> </span><code class="highlighter-rouge">[24, 23, 24, 24, 22, 23]</code>. What this code did was translate the years of birth into ages, and it took us a for loop and an append statement to a new list to do that.</p>
+<p><span></span></p>
+<p>Compare to this piece of code:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">years_of_birth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1991</span><span class="p">]</span>
+  <span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2014</span> <span class="o">-</span> <span class="n">year</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_of_birth</span><span class="p">]</span></code></pre>
+</figure>
+<p>The second line here - the line with<span> </span><code class="highlighter-rouge">ages</code><span> </span>is a<span> </span><em>list comprehension.</em></p>
+<p>It accomplishes the same thing as the first code sample - at the end, the<span> </span><code class="highlighter-rouge">ages</code><span> </span>variable has a list containing<span> </span><code class="highlighter-rouge">[24, 23, 24, 24, 22, 23]</code>, the ages corresponding to all the birthdates.</p>
+<p>The idea of the list comprehension is to condense the for loop and the list appending into one simple line. Notice that the for loop just shifted to the end of the list comprehension, and the part before the<span> </span><code class="highlighter-rouge">for</code><span> </span>keyword is the thing to append to the end of the new list.</p>
+<p>You can also embed<span> </span><code class="highlighter-rouge">if</code><span> </span>statements into the list comprehension - check out<span> </span><a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">this reference</a><span> </span>to help you out. There are many examples and a better explanation than I can ever give.</p>
+<p><strong>Happy coding!</strong></p>
+<p><strong></strong></p>
+<p><strong>清單理解</strong></p>
+<p><strong>練習7 (和<a href="https://www.practicepython.org/solution/2014/03/26/07-list-comprehensions-solutions.html">解決方案</a>)</strong></p>
+<p>比方說我給您一個保存在變量中的列表：<code class="highlighter-rouge">a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code>。編寫一行Python來獲取此列表，<code class="highlighter-rouge">a</code>並創建一個僅包含該列表偶數元素的新列表。<strong></strong></p>
+<p><strong>討論區</strong></p>
+<p>本週的概念：</p>
+<ul>
+<li>清單理解</li>
+</ul>
+<p><strong>清單理解</strong></p>
+<p>列表理解<span><span>的思想</span><span>是使代碼更緊湊，以完成涉及列表的任務。</span><span>以下面的代碼為例：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">years_of_birth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1991</span><span class="p">]</span>
+  <span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_of_birth</span><span class="p">:</span> 
+    <span class="n">ages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2014</span> <span class="o">-</span> <span class="n">year</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>最後，變量</span></span><code class="highlighter-rouge">ages</code><span><span>具有list<span> </span></span></span><code class="highlighter-rouge">[24, 23, 24, 24, 22, 23]</code><span><span>。</span><span>這段代碼所做的就是將出生的歲月轉換成年齡，然後我們使用了for循環，並在新列表中添加了一個append語句來做到這一點。</span></span></p>
+<p><span><span>比較這段代碼：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">years_of_birth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1991</span><span class="p">]</span>
+  <span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2014</span> <span class="o">-</span> <span class="n">year</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_of_birth</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>這裡的第二行-與的行</span></span><code class="highlighter-rouge">ages</code><span><span>是</span></span><em><span><span>列表理解。</span></span></em></p>
+<p><span><span>它完成了與第一個代碼示例相同的任務-最後，該</span></span><code class="highlighter-rouge">ages</code><span><span>變量具有一個列表，其中包含</span></span><code class="highlighter-rouge">[24, 23, 24, 24, 22, 23]</code><span><span>，其年齡對應於所有生日。</span></span></p>
+<p><span><span>列表理解的思想是壓縮for循環，並將列表追加到一條簡單的行中。</span><span>請注意，for循環剛剛移到列表理解的末尾，而</span></span><code class="highlighter-rouge">for</code><span><span>關鍵字</span><span>之前的部分</span><span>是要附加到新列表末尾的東西。</span></span></p>
+<p><span><span>您還可以將</span></span><code class="highlighter-rouge">if</code><span><span>語句</span><span>嵌入</span><span>到列表理解中-請查閱</span></span><a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"><span><span>此參考資料</span></span></a><span><span>以幫助您。</span><span>有許多例子和比我能提供的更好的解釋。</span></span></p>
+<p><span><span>祝您編碼愉快！</span></span></p>
+<h3>p8</h3>
+<p><strong>Rock Paper Scissors</strong></p>
+<p><strong>Exercise 8 (and <a href="https://www.practicepython.org/solution/2014/04/02/08-rock-paper-scissors-solutions.html">Solution</a>)</strong></p>
+<p>Make a two-player Rock-Paper-Scissors game. (<em>Hint: Ask for player plays (using<span> </span><code class="highlighter-rouge">input</code>), compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game</em>)</p>
+<p>Remember the rules:</p>
+<ul>
+<li>Rock beats scissors</li>
+<li>Scissors beats paper</li>
+<li>Paper beats rock</li>
+</ul>
+<p><strong>Discussion</strong></p>
+<p>Concepts for this week:</p>
+<ul>
+<li>While loops</li>
+<li>Infinite loops</li>
+<li>Break statements</li>
+</ul>
+<p><strong>While loops</strong></p>
+<p>We have already discussed<span> </span><code class="highlighter-rouge">for</code><span> </span>loops, or loops that look sequentially (one by one) at elements in a list. There is a second type of loop that works in a slightly different way called a<span> </span><code class="highlighter-rouge">while</code><span> </span>loop.</p>
+<p>The idea is simple: while a certain condition is<span> </span><code class="highlighter-rouge">True</code>, keep doing something. For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">-=</span> <span class="mi">1</span></code></pre>
+</figure>
+<p>The output of this code segment is:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="mi">5</span>
+  <span class="mi">4</span>
+  <span class="mi">3</span>
+  <span class="mi">2</span>
+  <span class="mi">1</span></code></pre>
+</figure>
+<p>A particularly useful way to use<span> </span><code class="highlighter-rouge">while</code><span> </span>loops is checking user input for correctness. For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Type "enter" to quit:'</span> <span class="p">)</span>
+  <span class="k">while</span> <span class="n">quit</span> <span class="o">!=</span> <span class="s">"enter"</span><span class="p">:</span>
+    <span class="n">quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Type "enter" to quit:'</span> <span class="p">)</span></code></pre>
+</figure>
+<p>The uses for this are infinite, and can (and should!) be combined with conditionals to yield the most efficient results.</p>
+<p><strong>Infinite loops</strong></p>
+<p>An infinite loop is a loop that never stops. This means that the condition in the beginning of the while loop will always be true.</p>
+<p>For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Inside the loop"</span><span class="p">)</span></code></pre>
+</figure>
+<p>What will happen is the loop will print out the phrase “Inside the loop” forever and ever. If you are running your computer, you will have to “kill the program” to stop it. Each operating system has a different way of “killing a program” to get out of an infinite loop.</p>
+<p>On Linux: in the terminal, type “CTRL-C” to kill the program that is currently running in the terminal. If you are using the IDLE Python IDE, then you must press “CTRL-D” to exit your running program. When in doubt, do a Google search before you start programming!</p>
+<p>On Windows: type “CTRL-ALT-DEL” and open the task manager to kill the program.</p>
+<p>On Mac: right-click on the task, and kill the program that is running forever.</p>
+<p>If you find yourself in an infinite loop, your program will never end.</p>
+<p><strong>Break statements</strong></p>
+<p>A<span> </span><code class="highlighter-rouge">break</code><span> </span>statement stops the execution of a loop before the original condition is met. While the use of a<span> </span><code class="highlighter-rouge">break</code><span> </span>statement will often start an argument about good coding practices, sometimes it is useful.</p>
+<p>For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">while</span> <span class="bp">True</span><span class="p">:</span> 
+    <span class="n">usr_command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your command: "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">usr_command</span> <span class="o">==</span> <span class="s">"quit"</span><span class="p">:</span>
+      <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span> 
+      <span class="k">print</span><span class="p">(</span><span class="s">"You typed "</span> <span class="o">+</span> <span class="n">usr_command</span><span class="p">)</span></code></pre>
+</figure>
+<p>In this case, the<span> </span><code class="highlighter-rouge">break</code><span> </span>statement is used to break off the “infinite while loop” that we have constructed with the<span> </span><code class="highlighter-rouge">while True</code><span> </span>statement.</p>
+<p><strong>Happy coding!</strong></p>
+<p></p>
+<p>剪<strong>刀石頭布</strong></p>
+<div><strong>練習8（和<a href="https://www.practicepython.org/solution/2014/04/02/08-rock-paper-scissors-solutions.html">解決方案</a>）</strong><br/><i></i></div>
+<p><span><span>製作兩人石頭剪刀布遊戲。</span><span>（</span></span><em><span><span>提示：（使用</span></span><code class="highlighter-rouge">input</code><span><span>）</span><span>詢問玩家玩法</span><span>，進行比較，打印出對獲勝者表示祝賀的消息，並詢問玩家是否要開始新遊戲</span></span></em><span><span>）</span></span></p>
+<p><span><span>記住規則：</span></span></p>
+<ul>
+<li><span><span>搖滾剪刀</span></span></li>
+<li><span><span>剪刀打紙</span></span></li>
+<li><span><span>紙打石頭</span></span></li>
+</ul>
+<p><strong>討論區</strong></p>
+<p><span><span>本週的概念：</span></span></p>
+<ul>
+<li><span><span>While循環</span></span></li>
+<li><span><span>無限循環</span></span></li>
+<li><span><span>中斷聲明</span></span></li>
+</ul>
+<p><strong>While循環</strong></p>
+<p><span><span>我們已經討論過</span></span><code class="highlighter-rouge">for</code><span><span>循環，或循環（逐一）查看列表中的元素的循環。</span><span>還有第二種類型的循環，其工作方式略有不同，稱為</span></span><code class="highlighter-rouge">while</code><span><span>循環。</span></span></p>
+<p><span><span>這個想法很簡單：在一定條件下</span></span><code class="highlighter-rouge">True</code><span><span>，繼續做某事。</span><span>例如：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">-=</span> <span class="mi">1</span></code></pre>
+</figure>
+<p><span><span>該代碼段的輸出為：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="mi">5</span>
+  <span class="mi">4</span>
+  <span class="mi">3</span>
+  <span class="mi">2</span>
+  <span class="mi">1</span></code></pre>
+</figure>
+<p><span><span>使用</span></span><code class="highlighter-rouge">while</code><span><span>循環的</span><span>一種特別有用的方法</span><span>是檢查用戶輸入的正確性。</span><span>例如：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Type "enter" to quit:'</span> <span class="p">)</span>
+  <span class="k">while</span> <span class="n">quit</span> <span class="o">!=</span> <span class="s">"enter"</span><span class="p">:</span>
+    <span class="n">quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Type "enter" to quit:'</span> <span class="p">)</span></code></pre>
+</figure>
+<p><span><span>此方法的用途是無限的，並且可以（並且應該！）與條件條件結合使用以產生最有效的結果。</span></span></p>
+<p><strong>無限循環</strong></p>
+<p><span><span>無限循環是永不停止的循環。</span><span>這意味著while循環開始時的條件將始終為true。</span></span></p>
+<p><span><span>例如：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Inside the loop"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>將會發生的是，循環將永遠打印出短語“ Inside the loop”。</span><span>如果您正在運行計算機，則必須“殺死該程序”以將其停止。</span><span>每個操作系統都有不同的“殺死程序”以擺脫無限循環的方式。</span></span></p>
+<p><span><span>在Linux上：在終端中，鍵入“ CTRL-C”以終止終端中當前正在運行的程序。</span><span>如果使用的是IDLE Python IDE，則必須按“ CTRL-D”退出正在運行的程序。</span><span>如有疑問，請在開始編程之前進行Google搜索！</span></span></p>
+<p><span><span>在Windows上：鍵入“ CTRL-ALT-DEL”並打開任務管理器以終止程序。</span></span></p>
+<p><span><span>在Mac上：右鍵單擊該任務，然後終止永久運行的程序。</span></span></p>
+<p><span><span>如果發現自己陷入無限循環，則程序將永遠不會結束。</span></span></p>
+<p><strong>中斷聲明</strong></p>
+<p><span></span><code class="highlighter-rouge">break</code><span><span>在滿足原始條件之前，</span><span>一條</span><span>語句將停止執行循環。</span><span>儘管使用</span></span><code class="highlighter-rouge">break</code><span><span>語句通常會引發有關良好編碼實踐的爭論，但有時它很有用。</span></span></p>
+<p><span><span>例如：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">while</span> <span class="bp">True</span><span class="p">:</span> 
+    <span class="n">usr_command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your command: "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">usr_command</span> <span class="o">==</span> <span class="s">"quit"</span><span class="p">:</span>
+      <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span> 
+      <span class="k">print</span><span class="p">(</span><span class="s">"You typed "</span> <span class="o">+</span> <span class="n">usr_command</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>在這種情況下，該</span></span><code class="highlighter-rouge">break</code><span><span>語句用於中斷我們使用該</span></span><code class="highlighter-rouge">while True</code><span><span>語句</span><span>構造的“無限while循環”<span> </span></span><span>。</span></span></p>
+<p><strong>祝您編碼愉快！</strong></p>
+<h3>p9</h3>
+<strong>Guessing Gmae One </strong>
+<p><strong>Exercise 9 (and <a href="https://www.practicepython.org/solution/2014/04/10/09-guessing-game-one-solutions.html">Solution</a>)</strong></p>
+<p>Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. (<em>Hint: remember to use the user input lessons from the very<span> </span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html">first exercise</a></em>)</p>
+<p>Extras:</p>
+<ul>
+<li>Keep the game going until the user types “exit”</li>
+<li>Keep track of how many guesses the user has taken, and when the game ends, print this out.</li>
+</ul>
+<p><strong>Discussion</strong></p>
+<p>Concepts for this week:</p>
+<ul>
+<li>Modules</li>
+<li>Random numbers</li>
+<li>User input</li>
+</ul>
+<p><strong>Random Numbers (and Modules)</strong></p>
+<p>This is your first exposure to using Python code that somebody else wrote. In Python, these formally-distributed code packages are called<span> </span><em>modules</em>. The thing we want from a module in this exercise is the ability to generate random numbers. This comes from the<span> </span><em>random</em><span> </span>module.</p>
+<p>To use a module, at the top of your file, type</p>
+<pre><code class="language-python" data-lang="python">	<span class="kn">import</span> <span class="nn">random</span></code></pre>
+<p>This means you are allowing your Python program to use a module called<span> </span><code class="highlighter-rouge">random</code><span> </span>in the rest of your code.</p>
+<p>To use it (and generate a random integer), now type:</p>
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span></code></pre>
+<p>Once you run this program, the variable<span> </span><code class="highlighter-rouge">a</code><span> </span>will have a random integer that the computer made for you, between 2 and 6 (including 2 and 6). The specific documentation for this method is<span> </span><a href="https://docs.python.org/3.3/library/random.html#random.randint">here</a>.</p>
+<p>There are many ways you can generate random numbers - integers, decimals, and much more. The<span> </span><a href="https://docs.python.org/3.3/library/random.html">Python documentation</a><span> </span>has much more detailed information about what is possible from the<span> </span><code class="highlighter-rouge">random</code><span> </span>module.</p>
+<p><strong>User input</strong></p>
+<p>We covered all you need to know in the<span> </span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html">first exercise</a><span> </span>of this blog!</p>
+<p><strong>Happy coding!</strong></p>
+<p><strong>猜遊戲一</strong></p>
+<p><strong>練習9 (和<a href="https://www.practicepython.org/solution/2014/04/10/09-guessing-game-one-solutions.html">解決方案</a>)</strong></p>
+<p><span><span>生成1到9之間的隨機數（包括1到9）。</span><span>讓用戶猜數字，然後告訴他們猜的是太低，太高還是完全正確。</span><span>（</span></span><em><span><span>提示：請記住在</span></span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span><span>第一練習中</span></span></a></em><span><em><span>使用用戶輸入的課程</span></em><span>）</span></span></p>
+<p><span><span>附加功能：</span></span></p>
+<ul>
+<li><span><span>繼續遊戲，直到用戶鍵入“退出”</span></span></li>
+<li><span><span>跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</span></span></li>
+</ul>
+<p><strong>討論區</strong></p>
+<p><span><span>本週的概念：</span></span></p>
+<ul>
+<li><span><span>模組</span></span></li>
+<li><span><span>隨機數</span></span></li>
+<li><span><span>用戶輸入</span></span></li>
+</ul>
+<p><strong>隨機數（和模塊）</strong></p>
+<p><span><span>這是您第一次使用別人編寫的Python代碼。</span><span>在Python中，這些正式分發的代碼包稱為</span></span><em><span><span>modules</span></span></em><span><span>。</span><span>在本練習中，我們希望從模塊獲得的是生成隨機數的能力。</span><span>這來自</span></span><em><span><span>隨機</span></span></em><span><span>模塊。</span></span></p>
+<p><span><span>要使用模塊，請在文件頂部鍵入</span></span></p>
+<pre><code class="language-python" data-lang="python">	<span class="kn">import</span> <span class="nn">random</span></code></pre>
+<p><span><span>這意味著您允許Python程序使用</span></span><code class="highlighter-rouge">random</code><span><span>在其餘代碼中</span><span>調用的模塊</span><span>。</span></span></p>
+<p><span><span>要使用它（並生成一個隨機整數），現在鍵入：</span></span></p>
+<p class="highlight"></p>
+<pre><code class="language-python" data-lang="python">	<span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span></code></pre>
+<p></p>
+<p><span><span>一旦運行此程序，該變量</span></span><code class="highlighter-rouge">a</code><span><span>將具有計算機為您生成的隨機整數，介於2到6之間（包括2到6）。</span><span>此方法的特定文檔</span></span><a href="https://docs.python.org/3.3/library/random.html#random.randint"><span><span>在此處</span></span></a><span><span>。</span></span></p>
+<p><span><span>您可以通過多種方式生成隨機數-整數，小數等。</span><span>在</span></span><a href="https://docs.python.org/3.3/library/random.html"><span><span>Python文檔</span></span></a><span><span>有更詳細的了解什麼是可能從信息</span></span><code class="highlighter-rouge">random</code><span><span>模塊。</span></span></p>
+<p><strong>用戶輸入</strong></p>
+<p><span><span>我們在</span><span>本博客</span><span>的</span></span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span><span>第一個練習</span></span></a><span><span>中</span><span>介紹了您需要了解的所有信息</span><span>！</span></span></p>
+<p><strong>祝您編碼愉快！</strong></p>
 <h3>P10</h3>
 List Overlap comprehensions</div>
 <div class="activitywrap purpose learnbydoing flash"></div>
@@ -1513,7 +1763,7 @@ Sample solution
 </tr>
 </tbody>
 </table>
-<h3 class="pagetitle">P3</h3>
+<h3>P3</h3>
 <p><strong>LIST LESS THAN SOLUTIONS TEN</strong></p>
 <p><strong>EXERCISE</strong></p>
 <p>Take a list, say for example this one:</p>
@@ -1696,7 +1946,7 @@ Sample solution
 </div>
 </div>
 <p><span><span>這項練習有很多棘手的事情。</span><span>首先，</span></span><code class="highlighter-rouge">range()</code><span><span>需要仔細輸出函數的</span><span>輸入字符串和整數之間的類型轉換</span><span>。</span><span>其次，</span></span><code class="highlighter-rouge">range()</code><span><span>必須仔細構造</span><span>論據以</span><span>涵蓋所有可能的數字。</span><span>第三，</span></span><code class="highlighter-rouge">if</code><span><span>聲明中</span><span>的條件</span><span>也必須正確。</span></span></p>
-<h3><span><span>P5</span></span></h3>
+<h3>P5</h3>
 <p><span><span>LIST OVERLAP SOLUTIONS</span></span></p>
 </div>
 </div>
@@ -1719,7 +1969,7 @@ Sample solution
 	<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code></pre>
 </figure>
 <p><span><span>並編寫一個程序，該程序返回一個列表，該列表僅包含列表之間的公共元素（無重複項）。</span><span>確保您的程序可以在兩個不同大小的列表上運行。</span></span></p>
-<h3><span><span>P6</span></span></h3>
+<h3>P6</h3>
 <div class="gist-data">
 <div class="js-gist-file-update-container js-task-list-container file-box">
 <div class="file my-2" id="file-stringlists-py">
@@ -1958,7 +2208,637 @@ Sample solution
 </tr>
 </tbody>
 </table>
-<p></p>
+<h3>p7</h3>
+<strong>List Comprehensions Solutions </strong>
+<p><strong>Exercise 7</strong></p>
+<p>Let’s say I give you a list saved in a variable:<span> </span><code class="highlighter-rouge">a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code>. Write one line of Python that takes this list<span> </span><code class="highlighter-rouge">a</code><span> </span>and makes a new list that has only the even elements of this list in it.</p>
+<p><strong>Sample solutions</strong></p>
+<p>For the meat of the solution, check this out:</p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-py-LC1">
+<pre>   1    b = [element for element in a if element % 2 == 0]</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line">
+<div><span class="pl-s1"><span> <span> </span><a href="https://gist.github.com/anonymous/9779343#file-gistfile1-py">gistfile1.py</a></span><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>                                <a href="https://gist.github.com/anonymous/9779343/raw/f775b4bd8163439e95cf1dc2d37e274d9a62d696/gistfile1.py">view raw</a></span></div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>And for a “complete” solution, look at this:</p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-exercise-7-list-comprehension-LC1">
+<pre>   1    __author__ = 'jhunt'
+   2    
+   3    a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+   4    b = [number for number in a if number % 2 == 0]
+   5
+   6    print(b)</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line">  <a href="https://gist.github.com/jeffhunt/9659795#file-exercise-7-list-comprehension">Exercise 7 - List Comprehension</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>    <a href="https://gist.github.com/jeffhunt/9659795/raw/45c305e1097747b1ec456b4ca51c1b8100bbfa66/Exercise%207%20-%20List%20Comprehension">view raw</a></td>
+</tr>
+</tbody>
+</table>
+<div class="gist" id="gist9659795">
+<div class="gist-file">
+<div class="gist-meta"></div>
+</div>
+</div>
+<p>For a solution that uses the<span> </span><code class="highlighter-rouge">random</code><span> </span>library to generate test lists, check this out:</p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-list_comprehension-py-LC1">
+<pre>   1    import random
+   2
+   3    numlist = []
+<span>   4    </span>list_length = random.randint(5,15)
+<span>   5    </span>
+<span>   6    </span>
+<span>   7    </span>while len(numlist) &lt; list_length:
+<span>   8    </span>    numlist.append(random.randint(1,75))
+<span>   9    </span>    
+<span>  10    </span>
+<span>  11    </span>evenlist = [number for number in numlist if number % 2 == 0] 
+<span>  12    </span>
+<span>  13    </span>print(numlist)
+<span>  14    </span>print(evenlist)</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"> <a href="https://gist.github.com/JamieMacIver/9782963#file-list_comprehension-py">list_comprehension.py</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>     <a href="https://gist.github.com/JamieMacIver/9782963/raw/38d3687da976010a1d0892897af7ed162c5aaf51/list_comprehension.py">view raw</a></td>
+</tr>
+</tbody>
+</table>
+<div class="gist" id="gist9782963">
+<div class="gist-file">
+<p class="gist-meta"><strong>Share the fun!</strong></p>
+<div class="gist-meta"><strong> 清單理解解決方案  </strong> </div>
+</div>
+</div>
+<p><strong><a href="https://www.practicepython.org/exercise/2014/03/19/07-list-comprehensions.html">練習7</a></strong></p>
+<p><span><span>假設我給您一個保存在變量中的列表：</span></span><code class="highlighter-rouge">a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code><span><span>。</span><span>編寫一行Python來獲取此列表，</span></span><code class="highlighter-rouge">a</code><span><span>並創建一個僅包含該列表偶數元素的新列表。</span></span></p>
+<p><strong>樣品解決方案</strong></p>
+<p><span><span>對於解決方案的實質，請檢查以下內容：</span></span></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-gistfile1-py-LC1">
+<pre>   1    b = [element for element in a if element % 2 == 0]</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span>  <a href="https://gist.github.com/anonymous/9779343#file-gistfile1-py">gistfile1.py</a></span><span> 由</span><span> </span><a href="https://github.com/">GitHub</a> 託管                                   <a href="https://gist.github.com/anonymous/9779343/raw/f775b4bd8163439e95cf1dc2d37e274d9a62d696/gistfile1.py">查看原始</a></span></td>
+</tr>
+</tbody>
+</table>
+<p><span><span>對於“完整”的解決方案，請看以下內容：</span></span></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-exercise-7-list-comprehension-LC1">
+<pre>   1    __author__ = 'jhunt'
+   2    
+   3    a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+   4    b = [number for number in a if number % 2 == 0]
+   5
+   6    print(b)</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"> <span> </span><a href="https://gist.github.com/jeffhunt/9659795#file-exercise-7-list-comprehension">練習 7 - 清單理解</a><span> 由</span><span> </span><a href="https://github.com/">GitHub</a> 託管                            <a href="https://gist.github.com/jeffhunt/9659795/raw/45c305e1097747b1ec456b4ca51c1b8100bbfa66/Exercise%207%20-%20List%20Comprehension">查看原始</a></td>
+</tr>
+</tbody>
+</table>
+<p><span><span>對於使用該</span></span><code class="highlighter-rouge">random</code><span><span>庫生成測試列表</span><span>的解決方案</span><span>，請檢查以下內容：</span></span></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-list_comprehension-py-LC1">
+<pre>   1    import random
+   2
+   3    numlist = []
+<span>   4    </span>list_length = random.randint(5,15)
+<span>   5    </span>
+<span>   6    </span>
+<span>   7    </span>while len(numlist) &lt; list_length:
+<span>   8    </span>    numlist.append(random.randint(1,75))
+<span>   9    </span>    
+<span>  10    </span>
+<span>  11    </span>evenlist = [number for number in numlist if number % 2 == 0] 
+<span>  12    </span>
+<span>  13    </span>print(numlist)
+<span>  14    </span>print(evenlist)</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"> <a href="https://gist.github.com/JamieMacIver/9782963#file-list_comprehension-py">list_comprehension.py</a><span> </span>由<span> </span><a href="https://github.com/">GitHub</a> 託管                     <a href="https://gist.github.com/JamieMacIver/9782963/raw/38d3687da976010a1d0892897af7ed162c5aaf51/list_comprehension.py">查看原始</a></td>
+</tr>
+</tbody>
+</table>
+<p id="share"><strong>分享樂趣！</strong></p>
+<h3>p8</h3>
+<strong>Rock Paper Scissors Solutions</strong>
+<p><strong><a href="https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html">Exercise 8</a></strong></p>
+<p>Make a two-player Rock-Paper-Scissors game. (<em>Hint: Ask for player plays (using<span> </span><code class="highlighter-rouge">input</code>), compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game</em>)</p>
+<p>Remember the rules:</p>
+<ul>
+<li>Rock beats scissors</li>
+<li>Scissors beats paper</li>
+<li>Paper beats rock</li>
+</ul>
+<p><strong>Sample solution</strong></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-rockpaperscissors-py-LC1">
+<pre>   1    import sys
+   2
+   3    user1 = input("What's your name?")
+   4    user2 = input("And your name?")
+   5    user1_answer = input("%s, do yo want to choose rock, paper or scissors?" % user1)
+   6    user2_answer = input("%s, do you want to choose rock, paper or scissors?" % user2)
+   7    
+   8    def compare(u1, u2):
+   9        if u1 == u2:
+  10        return("It's a tie!")
+  11        elif u1 == 'rock':
+  12            if u2 == 'scissors':
+  13                return("Rock wins!")
+  14            else:
+  15                return("Paper wins!")
+  16        elif u1 == 'scissors':
+  17            if u2 == 'paper':
+  18                return("Scissors win!")
+  19            else:
+  20                return("Rock wins!")
+  21        elif u1 == 'paper':
+  22            if u2 == 'rock':
+  23                return("Paper wins!")
+  24            else:
+  25                return("Scissors win!")
+  26        else:
+  27            return("Invalid input! You have not entered rock, paper or scissors, try again.")
+  28            sys.exit()
+  29
+  30    print(compare(user1_answer, user2_answer)</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-en"> <a href="https://gist.github.com/redice99/21ceca1561519f5a12bc#file-rockpaperscissors-py">rockpaperscissors.py</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>   <span> </span><a href="https://gist.github.com/redice99/21ceca1561519f5a12bc/raw/83a656379141e32ded22ae53d030b74dd02c4b97/rockpaperscissors.py">view raw</a></span></td>
+</tr>
+</tbody>
+</table>
+<p>Another sample solution uses a clever way of checking the winner:</p>
+<div class="gist" id="gist29840996">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-rock-paper-scissors-game">
+<div class="Box-body p-0 blob-wrapper data type-text" itemprop="text">
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-rock-paper-scissors-game-LC1">
+<pre>   1    print('''Please pick one:
+   2                rock
+   3                scissors
+   4                paper''')
+   5    
+   6    while True:
+   7        game_dict = {'rock': 1, 'scissors': 2, 'paper': 3}
+   8        player_a = str(input("Player a: "))
+   9        player_b = str(input("Player b: "))
+  10        a = game_dict.get(player_a)
+  11        b = game_dict.get(player_b)
+  12        dif = a - b
+  13    
+  14        if dif in [-1, 2]:
+  15            print('player a wins.')
+  16            if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+  17                continue
+  18            else:
+  19                print('game over.')
+  20                break
+  21        elif dif in [-2, 1]:
+  22            print('player b wins.')
+  23            if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+  24                continue
+  25            else:
+  26                print('game over.')
+  27                break
+  28        else:
+  29            print('Draw.Please continue.')
+  30            print('')</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"> <a href="https://gist.github.com/springtan/6f579c3160bdcac2a0df#file-rock-paper-scissors-game">rock, paper, scissors game</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>   <span> </span><a href="https://gist.github.com/springtan/6f579c3160bdcac2a0df/raw/8c7899c1115d927feb27b82dc835a032f3473b56/rock,%20paper,%20scissors%20game">view raw</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p id="share"><strong>Share the fun!</strong></p>
+<p><strong> 剪刀石頭布解決方案</strong></p>
+<p><strong><a href="https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html">練習8</a></strong></p>
+<p><span><span>製作兩人石頭剪刀布遊戲。</span><span>（</span></span><em><span><span>提示：（使用</span></span><code class="highlighter-rouge">input</code><span><span>）</span><span>詢問玩家玩法</span><span>，進行比較，打印出對獲勝者表示祝賀的消息，並詢問玩家是否要開始新遊戲</span></span></em><span><span>）</span></span></p>
+<p><span><span>記住規則：</span></span></p>
+<ul>
+<li><span><span>搖滾剪刀</span></span></li>
+<li><span><span>剪刀打紙</span></span></li>
+<li><span><span>紙打石頭</span></span></li>
+</ul>
+<p><strong>樣品解決方案</strong></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-rockpaperscissors-py-LC1">
+<pre>   1    import sys
+   2
+   3    user1 = input("What's your name?")
+   4    user2 = input("And your name?")
+   5    user1_answer = input("%s, do yo want to choose rock, paper or scissors?" % user1)
+   6    user2_answer = input("%s, do you want to choose rock, paper or scissors?" % user2)
+   7    
+   8    def compare(u1, u2):
+   9        if u1 == u2:
+  10        return("It's a tie!")
+  11        elif u1 == 'rock':
+  12            if u2 == 'scissors':
+  13                return("Rock wins!")
+  14            else:
+  15                return("Paper wins!")
+  16        elif u1 == 'scissors':
+  17            if u2 == 'paper':
+  18                return("Scissors win!")
+  19            else:
+  20                return("Rock wins!")
+  21        elif u1 == 'paper':
+  22            if u2 == 'rock':
+  23                return("Paper wins!")
+  24            else:
+  25                return("Scissors win!")
+  26        else:
+  27            return("Invalid input! You have not entered rock, paper or scissors, try again.")
+  28            sys.exit()
+  29
+  30    print(compare(user1_answer, user2_answer)</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-en"><a href="https://gist.github.com/redice99/21ceca1561519f5a12bc#file-rockpaperscissors-py">rockpaperscissors.py</a><span> </span>由<span> </span><a href="https://github.com/">GitHub</a> 託管  <span> </span><a href="https://gist.github.com/redice99/21ceca1561519f5a12bc/raw/83a656379141e32ded22ae53d030b74dd02c4b97/rockpaperscissors.py">查看原始</a></span></td>
+</tr>
+</tbody>
+</table>
+<p><span><span>另一個示例解決方案使用一種巧妙的方法來檢查獲勝者：</span></span></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-rock-paper-scissors-game-LC1">
+<pre>   1    print('''Please pick one:
+   2                rock
+   3                scissors
+   4                paper''')
+   5    
+   6    while True:
+   7        game_dict = {'rock': 1, 'scissors': 2, 'paper': 3}
+   8        player_a = str(input("Player a: "))
+   9        player_b = str(input("Player b: "))
+  10        a = game_dict.get(player_a)
+  11        b = game_dict.get(player_b)
+  12        dif = a - b
+  13    
+  14        if dif in [-1, 2]:
+  15            print('player a wins.')
+  16            if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+  17                continue
+  18            else:
+  19                print('game over.')
+  20                break
+  21        elif dif in [-2, 1]:
+  22            print('player b wins.')
+  23            if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+  24                continue
+  25            else:
+  26                print('game over.')
+  27                break
+  28        else:
+  29            print('Draw.Please continue.')
+  30            print('')</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"> <a href="https://gist.github.com/springtan/6f579c3160bdcac2a0df#file-rock-paper-scissors-game">石頭, 布, 剪刀遊戲</a><span> </span>由<span> </span><a href="https://github.com/">GitHub</a> 託管  <span> </span><a href="https://gist.github.com/springtan/6f579c3160bdcac2a0df/raw/8c7899c1115d927feb27b82dc835a032f3473b56/rock,%20paper,%20scissors%20game">查看原始</a></td>
+</tr>
+</tbody>
+</table>
+<div class="gist" id="gist29840996">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-rock-paper-scissors-game">
+<p class="Box-body p-0 blob-wrapper data type-text" itemprop="text"><strong>分享樂趣！</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>p9</h3>
+<strong>Guessing Game One Solutions</strong>
+<p><strong><a href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html">Exercise 9</a></strong></p>
+<p>Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. (_Hint: remember to use the user input lessons from the very<span> </span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html_">first exercise</a></p>
+<p>Extras:</p>
+<ul>
+<li>Keep the game going until the user types “exit”</li>
+<li>Keep track of how many guesses the user has taken, and when the game ends, print this out.</li>
+</ul>
+<p><strong>Sample solution</strong></p>
+<p>Great example of a solution including both extras!</p>
+<div class="gist" id="gist10153508">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-guessing_game-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-guessing_game-py-LC1">
+<pre>   1    import random
+   2    
+   3    number = random.randint(1,9)
+   4    guess = 0
+   5    count = 0
+   6    
+   7    
+   8    while guess != number and guess != "exit":
+   9        guess = input("What's your guess?")
+  10        
+  11        if guess == "exit":
+  12            break
+  13        
+  14        guess = int(guess)
+  15        count += 1
+  16        
+  17        if guess &lt; number:
+  18            print("Too low!")
+  19        elif guess &gt; number:
+  20            print("Too high!")
+  21        else:
+  22            print("You got it!")
+  23            print("And it only took you",count,"tries!")</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-en"> <a href="https://gist.github.com/JamieMacIver/10153508#file-guessing_game-py">guessing_game.py</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>   <span> </span><a href="https://gist.github.com/JamieMacIver/10153508/raw/8f1eb4d52b84314d7ecef92096c6ddd999ae2264/guessing_game.py">view raw</a></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>And another:</p>
+<div class="gist" id="gist28664224">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-practice9-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice9-py-LC1">
+<pre>   1    import random
+   2    
+   3    rd = random.randint(1,9)
+   4    guess = 0
+   5    c = 0
+   6    while guess != rd and guess != "exit":
+   7        guess = input("Enter a guess between 1 to 9")
+   8    
+   9        if guess == "exit":
+  10            break
+  11    
+  12        guess = int(guess)
+  13        c += 1
+  14    
+  15        if guess &lt; rd:
+  16            print("Too low")
+  17        elif guess &gt; rd:
+  18            print("Too high")
+  19        else:
+  20            print("Right!")
+  21            print("You took only", c, "tries!")
+  22    input()</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-en"> <a href="https://gist.github.com/avillareal98/9a2b5e5b59880d8ea6f8#file-practice9-py">practice9.py</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>   <span> </span><a href="https://gist.github.com/avillareal98/9a2b5e5b59880d8ea6f8/raw/e8caf9c3faa972346fbb1d35ae3ab280a087f97c/practice9.py">view raw</a></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>And another, with lots of helpful text!</p>
+<div class="gist" id="gist28850575">
+<div class="gist-file">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file my-2" id="file-09guessinggameone-py">
+<div class="Box-body p-0 blob-wrapper data type-python" itemprop="text">
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-09guessinggameone-py-LC1">
+<pre>   1    import random
+   2    
+   3    # Awroken
+   4    
+   5    MINIMUM = 1
+   6    MAXIMUM = 9
+   7    NUMBER = random.randint(MINIMUM, MAXIMUM)
+   8    GUESS = None
+   9    ANOTHER = None
+  10    TRY = 0
+  11    RUNNING = True
+  12    
+  13    print "Alright..."
+  14    
+  15    while RUNNING:
+  16        GUESS = raw_input("What is your lucky number? ")
+  17        if int(GUESS) &lt; NUMBER:
+  18            print "Wrong, too low."
+  19        elif int(GUESS) &gt; NUMBER:
+  20            print "Wrong, too high."
+  21        elif GUESS.lower() == "exit":
+  22            print "Better luck next time."
+  23        elif int(GUESS) == NUMBER:
+  24            print "Yes, that's the one, %s." % str(NUMBER)
+  25            if TRY &lt; 2:
+  26                print "Impressive, only %s tries." % str(TRY)
+  27            elif TRY &gt; 2 and TRY &lt; 10:
+  28                print "Pretty good, %s tries." % str(TRY)
+  29           else:
+  30                print "Bad, %s tries." % str(TRY)
+  31            RUNNING = False
+  32        TRY += 1</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-v"> <a href="https://gist.github.com/anonymous/0502baf8a01e3aa53550#file-09guessinggameone-py">09GuessingGameOne.py</a><span> </span>hosted with ❤ by<span> </span><a href="https://github.com/">GitHub</a>   <span> </span><a href="https://gist.github.com/anonymous/0502baf8a01e3aa53550/raw/c97abf833f6e5c5bd56479fb77ab0ddbe1535f7b/09GuessingGameOne.py">view raw</a></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="gist-meta"></div>
+</div>
+</div>
+<div id="share"><strong>Share the fun!</strong></div>
+<p><strong> 猜遊戲一解決方案</strong></p>
+<p><strong><a href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html">練習9</a></strong></p>
+<p><span><span>生成1到9之間的隨機數（包括1到9）。</span><span>讓用戶猜數字，然後告訴他們猜的是太低，太高還是完全正確。</span><span>（_提示：請記住在</span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html_"><span>第一練習中</span></a><span>使用用戶輸入的課程</span></span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html_"><span></span></a></p>
+<p><span><span>附加功能：</span></span></p>
+<ul>
+<li><span><span>繼續遊戲，直到用戶鍵入“退出”</span></span></li>
+<li><span><span>跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</span></span></li>
+</ul>
+<p><strong>樣品解決方案</strong></p>
+<p><span><span>一個解決方案的好例子，包括兩個額外功能！</span></span></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-guessing_game-py-LC1">
+<pre>   1    import random
+   2    
+   3    number = random.randint(1,9)
+   4    guess = 0
+   5    count = 0
+   6    
+   7    
+   8    while guess != number and guess != "exit":
+   9        guess = input("What's your guess?")
+  10        
+  11        if guess == "exit":
+  12            break
+  13        
+  14        guess = int(guess)
+  15        count += 1
+  16        
+  17        if guess &lt; number:
+  18            print("Too low!")
+  19        elif guess &gt; number:
+  20            print("Too high!")
+  21        else:
+  22            print("You got it!")
+  23            print("And it only took you",count,"tries!")</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-en"> <a href="https://gist.github.com/JamieMacIver/10153508#file-guessing_game-py">guessing_game.py</a><span> </span>由<span> </span><a href="https://github.com/">GitHub</a> 託管  <span> </span><a href="https://gist.github.com/JamieMacIver/10153508/raw/8f1eb4d52b84314d7ecef92096c6ddd999ae2264/guessing_game.py">查看原始</a></span></td>
+</tr>
+</tbody>
+</table>
+<p><span><span>還有一個：</span></span></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-practice9-py-LC1">
+<pre>   1    import random
+   2    
+   3    rd = random.randint(1,9)
+   4    guess = 0
+   5    c = 0
+   6    while guess != rd and guess != "exit":
+   7        guess = input("Enter a guess between 1 to 9")
+   8    
+   9        if guess == "exit":
+  10            break
+  11    
+  12        guess = int(guess)
+  13        c += 1
+  14    
+  15        if guess &lt; rd:
+  16            print("Too low")
+  17        elif guess &gt; rd:
+  18            print("Too high")
+  19        else:
+  20            print("Right!")
+  21            print("You took only", c, "tries!")
+  22    input()</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-en"> <a href="https://gist.github.com/avillareal98/9a2b5e5b59880d8ea6f8#file-practice9-py">practice9.py</a><span> </span>由<span> </span><a href="https://github.com/">GitHub</a> 託管  <span> </span><a href="https://gist.github.com/avillareal98/9a2b5e5b59880d8ea6f8/raw/e8caf9c3faa972346fbb1d35ae3ab280a087f97c/practice9.py">查看原始</a></span></td>
+</tr>
+</tbody>
+</table>
+<p><span><span>還有很多有用的文字！</span></span></p>
+<table border="1" cellspacing="0" class="highlight tab-size js-file-line-container" data-paste-markdown-skip="" data-tab-size="8">
+<tbody>
+<tr>
+<td class="blob-code blob-code-inner js-file-line" id="file-09guessinggameone-py-LC1">
+<pre>   1    import random
+   2    
+   3    # Awroken
+   4    
+   5    MINIMUM = 1
+   6    MAXIMUM = 9
+   7    NUMBER = random.randint(MINIMUM, MAXIMUM)
+   8    GUESS = None
+   9    ANOTHER = None
+  10    TRY = 0
+  11    RUNNING = True
+  12    
+  13    print "Alright..."
+  14    
+  15    while RUNNING:
+  16        GUESS = raw_input("What is your lucky number? ")
+  17        if int(GUESS) &lt; NUMBER:
+  18            print "Wrong, too low."
+  19        elif int(GUESS) &gt; NUMBER:
+  20            print "Wrong, too high."
+  21        elif GUESS.lower() == "exit":
+  22            print "Better luck next time."
+  23        elif int(GUESS) == NUMBER:
+  24            print "Yes, that's the one, %s." % str(NUMBER)
+  25            if TRY &lt; 2:
+  26                print "Impressive, only %s tries." % str(TRY)
+  27            elif TRY &gt; 2 and TRY &lt; 10:
+  28                print "Pretty good, %s tries." % str(TRY)
+  29           else:
+  30                print "Bad, %s tries." % str(TRY)
+  31            RUNNING = False
+  32        TRY += 1</pre>
+</td>
+</tr>
+<tr>
+<td class="blob-code blob-code-inner js-file-line"><span class="pl-v"> <a href="https://gist.github.com/anonymous/0502baf8a01e3aa53550#file-09guessinggameone-py">09GuessingGameOne.py</a><span> </span>由<span> </span><a href="https://github.com/">GitHub</a> 託管  <span> </span><a href="https://gist.github.com/anonymous/0502baf8a01e3aa53550/raw/c97abf833f6e5c5bd56479fb77ab0ddbe1535f7b/09GuessingGameOne.py">查看原始</a></span></td>
+</tr>
+</tbody>
+</table>
+<p id="share"><strong>分享樂趣！</strong></p>
 <h3>P10</h3>
 <div class="gist-meta">List Overlap Comprehensions Solutions
 <div><i></i></div>
@@ -2312,7 +3192,7 @@ Sample solution
 </div>
 <div id="share"><span><span>分享樂趣！</span></span></div>
 <div>
-<h3>P11 </h3>
+<h3>P11</h3>
 <span><span><span><span>Check Primality Functions Solutions</span></span></span></span>
 <div><i></i></div>
 <span><span><span><a href="https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html">Exercise 11</a><span></span></span></span></span>
@@ -3075,7 +3955,7 @@ Sample solution
 </div>
 </div>
 </div>
-<h3>P12 </h3>
+<h3>P12</h3>
 <p>List Ends Solutions</p>
 <div><i></i></div>
 <p><a href="https://www.practicepython.org/exercise/2014/04/25/12-list-ends.html">Exercise 12</a></p>
